@@ -1,70 +1,143 @@
-# Getting Started with Create React App
+# Contacts
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+|                            김규민                            |                            김소령                            |                            김연이                            |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <img src="https://user-images.githubusercontent.com/55784772/124715910-74793900-df3e-11eb-9745-2601765cd046.png" alt="profile" width="100" height="100"> | <img src="https://user-images.githubusercontent.com/55784772/124715910-74793900-df3e-11eb-9745-2601765cd046.png" alt="profile" width="100" height="100"> | <img src="https://user-images.githubusercontent.com/55784772/124715910-74793900-df3e-11eb-9745-2601765cd046.png" alt="profile" width="100" height="100"> |
+|       [q-bit-junior](https://github.com/q-bit-junior)        |          [soryeongk](https://github.com/soryeongk)           |          [younyikim](https://github.com/younyikim)           |
+|                      안녕 나는 규민이얌                      |                       안녕 나는 령이얌                       |                       안녕 나는 연이얌                       |
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `yarn start`
+# License
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Distributed under the MIT License. See `LICENSE` for more information.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Getting Started
 
-### `yarn build`
+0. installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+npm install --global yarn
+```
+1. clone
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+git clone https://github.com/we-sopt-sibi/client.git
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. yarn add -D package
 
-### `yarn eject`
+```
+yarn add -D eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks lint-staged husky
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. yarn add package
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+yarn add axios react-router-dom styled-components
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4. check lint before commit
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+yarn lint
+```
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Dependencies
 
-### Code Splitting
+```
+"@testing-library/jest-dom": "^5.11.4",
+"@testing-library/react": "^11.1.0",
+"@testing-library/user-event": "^12.1.10",
+"axios": "^0.24.0",
+"husky": "^7.0.4",
+"lint-staged": "^11.2.6",
+"react": "^17.0.2",
+"react-dom": "^17.0.2",
+"react-router-dom": "^6.0.2",
+"react-scripts": "4.0.3",
+"styled-components": "^5.3.3",
+"web-vitals": "^1.0.1"
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Folder Structure
 
-### Making a Progressive Web App
+```
+📦.git
+ ┗ ...
+📦.husky
+ ┗ 📜pre-commit
+📦.vscode
+ ┗ 📜settings.json
+📦public
+ ┗ 📜index.html
+📦src
+ ┣ 📂assets
+ ┃ ┣ 📂images
+ ┃ ┗ 📂icons
+ ┃ ┃ ┗ 📜index.js
+ ┣ 📂components
+ ┃ ┣ 📂common
+ ┃ ┃ ┣ 📜Header.jsx
+ ┃ ┃ ┗ 📜Footer.jsx
+ ┃ ┗ 📂main
+ ┃ ┣ 📜index.js
+ ┃ ┗ 📜Router.jsx
+ ┣ 📂libs
+ ┣ 📂pages
+ ┃ ┣ 📜index.js
+ ┃ ┣ 📜Main.jsx
+ ┃ ┣ 📜NotFound.jsx
+ ┃ ┗ 📜Page1.jsx
+ ┣ 📂styles
+ ┃ ┣ 📂fonts
+ ┃ ┣ 📜global-style.js
+ ┃ ┗ 📜theme.jsx
+ ┣ 📜App.js
+ ┗ 📜index.js
+📜.eslintrc.js
+📜.gitignore
+📜.prettierrc
+📜LICENSE
+📜package.json
+📜README.md
+📜yarn.lock
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Commit Convention
 
-### Deployment
+|       commit type       |                          situation                           |
+| :---------------------: | :----------------------------------------------------------: |
+|          init           |                        작업 세팅 커밋                        |
+|          feat           |                   새로운 기능에 대한 커밋                    |
+|           fix           |                    버그 수정에 대한 커밋                     |
+|           css           | 기능에 영향을 주지 않는 커밋, 코드 순서 등의 포맷에 관한 커밋 |
+|          lint           |                        코드 lint 수정                        |
+|           doc           |   그 외 자잘한 수정에 대한 커밋, 문서인 경우 doc으로 작성    |
+|          clean          |                      폴더 및 파일 정리                       |
+|        refactor         |                  코드 리팩토링에 대한 커밋                   |
+| Bad code / need improv. |                      개선이 필요한 코드                      |
+|   code review approve   |                        코드 리뷰 수용                        |
+|          build          |               빌드 관련 파일 수정에 대한 커밋                |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+|       commit type       |             Emoji              |                          situation                           |
+| :---------------------: | :----------------------------: | :----------------------------------------------------------: |
+|          init           | :construction:`:construction:` |                        작업 세팅 커밋                        |
+|          feat           |         :tada:`:tada:`         |                   새로운 기능에 대한 커밋                    |
+|           fix           |          :bug:`:bug:`          |                    버그 수정에 대한 커밋                     |
+|           css           |    :nail_care:`:nail_care:`    | 기능에 영향을 주지 않는 커밋, 코드 순서 등의 포맷에 관한 커밋 |
+|          lint           |       :shirt: `:shirt:`        |                        코드 lint 수정                        |
+|           doc           |         :memo:`:memo:`         |   그 외 자잘한 수정에 대한 커밋, 문서인 경우 doc으로 작성    |
+|          clean          |        :truck:`:truck:`        |                      폴더 및 파일 정리                       |
+|        refactor         |       :hammer:`:hammer:`       |                  코드 리팩토링에 대한 커밋                   |
+| Bad code / need improv. |       :hankey:`:hankey:`       |                      개선이 필요한 코드                      |
+|   code review approve   |      :ok_hand:`:ok_hand:`​      |                        코드 리뷰 수용                        |
+|          build          |        :house:`:house:`        |               빌드 관련 파일 수정에 대한 커밋                |
