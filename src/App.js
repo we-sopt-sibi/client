@@ -1,4 +1,3 @@
-import React from "react";
 import { ThemeProvider } from "styled-components";
 import Router from "./components/Router";
 import { GlobalStyle } from "./styles/global-style";

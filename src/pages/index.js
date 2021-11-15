@@ -1,3 +1,3 @@
-export { default as Main } from "./Main";
+export { default as Article } from "./Article";
 export { default as NotFound } from "./NotFound";
-export { default as Page1 } from "./Page1";
+export { default as ArticleList } from "./ArticleList";
