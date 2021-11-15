@@ -8,12 +8,33 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  /* @font-face {
+  @font-face {
     font-family: "NotoSansKR";
     font-weight: normal;
     font-style: normal;
     src: url("/fonts/NotoSansKR-Regular.otf") format("opentype");
-  } */
+  }
+
+  @font-face {
+    font-family: "NotoSansKR-Light";
+    font-weight: normal;
+    font-style: normal;
+    src: url("/fonts/NotoSansKR-Light.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "NanumMyeongjo";
+    font-weight: normal;
+    font-style: normal;
+    src: url("/fonts/NanumMyeongjo-Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Georgia";
+    font-weight: normal;
+    font-style: normal;
+    src: url("/fonts/georgia italic.ttf") format("truetype");
+  }
 
   html {
     color: #333333;
