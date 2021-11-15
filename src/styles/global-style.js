@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
   } */
 
   html {
-    color: #3E3E3E;
+    color: #333333;
     font-family: NotoSansKR;
   }
 
