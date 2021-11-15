@@ -1,9 +1,12 @@
-import { ArticleFooter, ArticleWrapper } from "../components";
+import { ArticleBody, ArticleBodyFooter, ArticleComment, ArticleFooter, ArticleHeader } from "../components";
 
 const Article = () => {
   return (
     <>
-      <ArticleWrapper />
+      <ArticleHeader />
+      <ArticleBody />
+      <ArticleBodyFooter />
+      <ArticleComment />
       <ArticleFooter />
     </>
   );
