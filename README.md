@@ -36,7 +36,7 @@ yarn add -D eslint prettier eslint-config-prettier eslint-plugin-prettier eslint
 3. yarn add package
 
 ```
-yarn add axios react-router-dom styled-components
+yarn add axios react-router-dom styled-components styled-reset
 ```
 
 4. check lint before commit
