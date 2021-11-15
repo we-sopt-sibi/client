@@ -54,6 +54,9 @@ export const GlobalStyle = createGlobalStyle`
 
   button {
     cursor: pointer;
+    border: 0.1rem solid ${({ theme }) => theme.colors.gray600};
+    display: flex;
+    align-items: center;
   }
 `;
 
