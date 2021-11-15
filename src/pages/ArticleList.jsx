@@ -1,5 +1,7 @@
+import { ListWrapper } from "../components";
+
 const ArticleList = () => {
-  return <div>ArticleList</div>;
+  return <ListWrapper />;
 };
 
 export default ArticleList;

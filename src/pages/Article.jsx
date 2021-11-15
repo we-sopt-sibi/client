@@ -1,5 +1,12 @@
+import { ArticleFooter, ArticleWrapper } from "../components";
+
 const Article = () => {
-  return <div>Article</div>;
+  return (
+    <>
+      <ArticleWrapper />
+      <ArticleFooter />
+    </>
+  );
 };
 
 export default Article;
