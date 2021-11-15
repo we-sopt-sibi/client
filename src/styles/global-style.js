@@ -9,14 +9,14 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   @font-face {
-    font-family: "NotoSansKR";
+    font-family: "NotoSansKR-Regular";
     font-weight: normal;
     font-style: normal;
     src: url("/fonts/NotoSansKR-Regular.otf") format("opentype");
   }
 
   @font-face {
-    font-family: "NotoSansKR-Light";
+    font-family: "NotoSansKR";
     font-weight: normal;
     font-style: normal;
     src: url("/fonts/NotoSansKR-Light.otf") format("opentype");
