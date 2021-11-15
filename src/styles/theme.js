@@ -1,8 +1,10 @@
 const calcRem = (size) => `${size / 10}rem`;
 const fontSizes = {
+  headLint: calcRem(45),
   title: calcRem(30),
   display: calcRem(28),
-  subTitle: calcRem(20),
+  subTitle1: calcRem(20),
+  subTitle2: calcRem(24),
   paragraph2: calcRem(16),
   paragraph1: calcRem(14),
   caption: calcRem(12),
