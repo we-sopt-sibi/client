@@ -32,7 +32,7 @@ const StyledSection = styled.div`
 
   & > p {
     font: 1.5rem/2.1rem NanumMyeongjo;
-    letter-spacing: 0.06rem;
+    letter-spacing: 0.04em;
   }
 
   & > svg {

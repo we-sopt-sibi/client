@@ -35,7 +35,7 @@ const MyProfile = styled.nav`
   flex-direction: column;
   align-items: center;
   font-size: ${({ theme }) => theme.fontSizes.paragraph1};
-  letter-spacing: -0.056rem;
+  letter-spacing: -0.04em;
 
   & > section {
     display: flex;
@@ -60,7 +60,7 @@ const DrawerNav = styled.nav`
   flex-direction: column;
   align-items: center;
   font-size: ${({ theme }) => theme.fontSizes.paragraph1};
-  letter-spacing: -0.056rem;
+  letter-spacing: -0.04em;
 
   & > section {
     display: flex;

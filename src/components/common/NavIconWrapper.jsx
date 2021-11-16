@@ -33,7 +33,7 @@ const StyledWrapper = styled.section`
       margin-left: 0.4rem;
       margin-right: 1rem;
       font-size: ${({ theme }) => theme.fontSizes.paragraph2};
-      letter-spacing: -0.056rem;
+      letter-spacing: -0.04em;
     }
   }
 `;
