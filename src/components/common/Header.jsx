@@ -5,14 +5,14 @@ import { ReactComponent as SearchIcon } from "../../assets/icons/search.svg";
 import { Drawer, NavIconWrapper } from "..";
 import { useLocation } from "react-router";
 
-const Header = () => {
+const Header = ({ showDrawer, setShowDrawer }) => {
   const { pathname } = useLocation();
 
   return (
     <StyledWrapper pathname={pathname}>
-      <Drawer />
+      <Drawer showDrawer={showDrawer} />
       <section>
-        <NavIcon alt="hamburger" />
+        <NavIcon alt="hamburger" onClick={() => setShowDrawer(true)} />
         <LogoIcon alt="logo" />
       </section>
       <span>IT 트렌드</span>
