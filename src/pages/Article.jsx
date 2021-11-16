@@ -1,5 +1,4 @@
 import { ArticleBody, ArticleBodyFooter, ArticleComment, ArticleFooter, ArticleHeader } from "../components";
-import styled from "styled-components";
 
 const Article = () => {
   return (
