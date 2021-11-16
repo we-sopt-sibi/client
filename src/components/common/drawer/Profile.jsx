@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { ReactComponent as NotificationIcon } from "../../../assets/icons/notification.svg";
 import { drawerProfile } from "../../../assets/images";
+import BtnWrapper from "./BtnWrapper";
 
 const Profile = () => {
   return (
@@ -9,10 +10,7 @@ const Profile = () => {
       <img src={drawerProfile} alt="profile" />
       <h3>령이</h3>
       <h4>brunch.co.kr/@brunch_id</h4>
-      <section>
-        <button>글쓰기</button>
-        <button>작가신청</button>
-      </section>
+      <BtnWrapper isProfile={true} />
     </StyledWrapper>
   );
 };
@@ -51,25 +49,5 @@ const StyledWrapper = styled.section`
   & > h4 {
     font-family: Georgia;
     font-size: ${({ theme }) => theme.fontSizes.caption};
-  }
-
-  & > section {
-    display: flex;
-    align-items: center;
-    margin-top: 1.5rem;
-
-    & > button {
-      border-color: ${({ theme }) => theme.colors.main};
-      border-radius: 1.6rem;
-      background-color: ${({ theme }) => theme.colors.white};
-      color: ${({ theme }) => theme.colors.main};
-      width: 8rem;
-      height: 3.1rem;
-      justify-content: center;
-
-      & + button {
-        margin-left: 1.2rem;
-      }
-    }
   }
 `;
