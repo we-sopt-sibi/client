@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import theme from "../../styles/theme";
 import { ArticleProfileWriter, Dot } from "../../assets/images";
 
 const ArticleHeader = () => {
   return (
-    <StyledHeaderWrapper theme={theme}>
+    <StyledHeaderWrapper>
       <h1>웹 디자인을 위한 컬러 선택</h1>
       <h2>실용적인 UI 컬러 적용 가이드</h2>
       <StyledProfile>
