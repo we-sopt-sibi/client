@@ -20,4 +20,8 @@ const StyledWrapper = styled.section`
   left: 0;
   top: 0;
   background-color: ${({ theme }) => theme.colors.white};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 0.1rem solid ${({ theme }) => theme.colors.gray300};
 `;

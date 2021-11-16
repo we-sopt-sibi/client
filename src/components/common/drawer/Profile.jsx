@@ -28,6 +28,8 @@ const StyledWrapper = styled.section`
   align-items: center;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.gray200};
+  border-bottom: 0.1rem solid ${({ theme }) => theme.colors.gray300};
+
   & > svg {
     position: absolute;
     right: 1.8rem;
