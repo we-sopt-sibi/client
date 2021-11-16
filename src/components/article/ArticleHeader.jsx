@@ -24,10 +24,11 @@ const StyledHeaderWrapper = styled.header`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  position: absolute;
+  position: relative;
   height: 15.7rem;
   left: 0;
   top: 27.1rem;
+  width: 100%;
 
   & > h1 {
     font-size: ${({ theme }) => theme.fontSizes.headLint};
