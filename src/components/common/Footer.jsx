@@ -1,5 +1,12 @@
+import styled from "styled-components";
+
 const Footer = () => {
-  return <div>Footer</div>;
+  return <StyledWrapper />;
 };
 
 export default Footer;
+
+const StyledWrapper = styled.section`
+  height: 72rem;
+  background-color: ${({ theme }) => theme.colors.gray300};
+`;
