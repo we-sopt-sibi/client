@@ -16,4 +16,3 @@ assignees: ''
 # 아래 내용 확인 후 이슈 제출
 - Assignees에 본인 체크
 - labels 체크
-- reviewers에 본인 제외 나머지 두 명 체크
