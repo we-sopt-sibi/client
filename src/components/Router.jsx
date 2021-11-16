@@ -1,13 +1,15 @@
+import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Article, NotFound, ArticleList } from "../pages";
 import { Footer, Header } from ".";
 
 const Router = () => {
+  const [showDrawer, setShowDrawer] = useState(false);
   return (
     <BrowserRouter>
-      <Header />
+      <Header showDrawer={showDrawer} setShowDrawer={setShowDrawer} />
       <Routes>
-        <Route path="/" element={<Article />} />
+        <Route path="/" element={<Article setShowDrawer={setShowDrawer} />} />
         <Route path="/list/*" element={<ArticleList />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
