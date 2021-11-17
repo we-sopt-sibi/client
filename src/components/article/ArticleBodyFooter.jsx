@@ -1,8 +1,15 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { ReactComponent as CommentIcon } from "../../assets/icons/comment.svg";
 import { ReactComponent as LikeIcon } from "../../assets/icons/like.svg";
+import { ReactComponent as LikeWhiteIcon } from "../../assets/icons/likeWhite.svg";
 
 const ArticleBodyFooter = () => {
+  const [isLikeClicked, setIsLikeClicked] = useState(false);
+
+  const handleLikeClick = () => {
+    setIsLikeClicked(!isLikeClicked);
+  };
   return (
     <StyledBodyFooterWrapper>
       <StyledTags>
@@ -16,9 +23,9 @@ const ArticleBodyFooter = () => {
           <button>컬러</button>
         </li>
       </StyledTags>
-      <StyledButtons>
-        <button>
-          <LikeIcon />
+      <StyledButtons isLikeClicked={isLikeClicked}>
+        <button onClick={handleLikeClick}>
+          {isLikeClicked ? <LikeIcon /> : <LikeWhiteIcon />}
           <span>좋아요</span>
           <span>199</span>
         </button>
@@ -65,6 +72,17 @@ const StyledTags = styled.ul`
 const StyledButtons = styled.div`
   display: flex;
 
+  ${({ isLikeClicked }) => isLikeClicked} {
+    & > button:first-child {
+      color: ${({ theme }) => theme.colors.white};
+      border: 0;
+      background-color: ${({ theme }) => theme.colors.main};
+      & > span + span {
+        color: ${({ theme }) => theme.colors.white};
+      }
+    }
+  }
+
   & > button {
     font-size: ${({ theme }) => theme.fontSizes.caption};
     color: ${({ theme }) => theme.colors.gray600};
@@ -72,11 +90,12 @@ const StyledButtons = styled.div`
     padding: 0.75rem 1.9rem;
     border: 0.1rem solid ${({ theme }) => theme.colors.gray600};
     border-radius: 2rem;
+    background-color: ${({ theme }) => theme.colors.white};
 
     & > svg {
       margin-right: 0.6em;
       & > path {
-        fill: ${({ theme }) => theme.colors.gray600};
+        fill: ${({ theme }) => theme.colors.black};
       }
     }
 
