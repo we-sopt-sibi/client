@@ -1,32 +1,36 @@
 import styled from "styled-components";
 import { writerProfile } from "../../assets/images";
 import { ReactComponent as Dot } from "../../assets/icons/dot.svg";
+import { CommentWrite } from "../../components";
 
 const ArticleComment = () => {
   return (
-    <StyledCommentWrapper>
-      <StyledCommentHeader>
-        <span>댓글</span>
-        <span>1</span>
-      </StyledCommentHeader>
-      <StyledCommentList>
-        <li>
-          <StyledComment>
-            <div>
-              <img src={writerProfile} alt="" />
-            </div>
-            <div>
+    <>
+      <StyledCommentWrapper>
+        <StyledCommentHeader>
+          <span>댓글</span>
+          <span>1</span>
+        </StyledCommentHeader>
+        <StyledCommentList>
+          <li>
+            <StyledComment>
               <div>
-                <span>은별</span>
-                <Dot />
-                <span>May 01. 2021</span>
+                <img src={writerProfile} alt="" />
               </div>
-              <div>좋은 정보 감사합니다.</div>
-            </div>
-          </StyledComment>
-        </li>
-      </StyledCommentList>
-    </StyledCommentWrapper>
+              <div>
+                <div>
+                  <span>은별</span>
+                  <Dot />
+                  <span>May 01. 2021</span>
+                </div>
+                <div>좋은 정보 감사합니다.</div>
+              </div>
+            </StyledComment>
+          </li>
+        </StyledCommentList>
+      </StyledCommentWrapper>
+      <CommentWrite />
+    </>
   );
 };
 
