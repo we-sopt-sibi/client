@@ -15,7 +15,7 @@ export default ArticleFooter;
 
 const StyledWrapper = styled.footer`
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 150.2rem;
   background-color: ${({ theme }) => theme.colors.gray100};
   display: flex;
