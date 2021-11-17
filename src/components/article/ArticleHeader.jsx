@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ArticleProfileWriter } from "../../assets/images";
+import { ReactComponent as ArticleWriter } from "../../assets/images/articleWriter.svg";
 import { ReactComponent as Dot } from "../../assets/icons/dot.svg";
 
 const ArticleHeader = () => {
@@ -8,7 +8,7 @@ const ArticleHeader = () => {
       <h1>웹 디자인을 위한 컬러 선택</h1>
       <h2>실용적인 UI 컬러 적용 가이드</h2>
       <StyledProfile>
-        <img src={ArticleProfileWriter} alt="" />
+        <ArticleWriter />
         <div>
           <span>by</span> <span>이지현</span>
           <Dot />
@@ -55,7 +55,7 @@ const StyledProfile = styled.div`
   margin-top: 4.2rem;
   position: relative;
 
-  & > img {
+  & > svg {
     height: 2.8rem;
     width: 2.8rem;
     margin-right: 0.6rem;
