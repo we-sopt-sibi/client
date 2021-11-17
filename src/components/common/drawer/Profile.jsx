@@ -4,13 +4,18 @@ import { drawerProfile } from "../../../assets/images";
 import BtnWrapper from "./BtnWrapper";
 
 const Profile = () => {
+  const buttons = {
+    button1: ["글쓰기", "#00C3BD"],
+    button2: ["작가신청", "#00C3BD"],
+  };
+
   return (
     <StyledWrapper>
       <NotificationIcon alt="notification" />
       <img src={drawerProfile} alt="profile" />
       <h3>령이</h3>
       <h4>brunch.co.kr/@brunch_id</h4>
-      <BtnWrapper isProfile={true} />
+      <BtnWrapper section={"profile"} buttons={buttons} />
     </StyledWrapper>
   );
 };
