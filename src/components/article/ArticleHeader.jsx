@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { ArticleProfileWriter, Dot } from "../../assets/images";
+import { ArticleProfileWriter } from "../../assets/images";
+import { ReactComponent as Dot } from "../../assets/icons/dot.svg";
 
 const ArticleHeader = () => {
   return (
@@ -10,7 +11,7 @@ const ArticleHeader = () => {
         <img src={ArticleProfileWriter} alt="" />
         <div>
           <span>by</span> <span>이지현</span>
-          <img src={Dot} alt="" />
+          <Dot />
           <span>Aug 19,2020</span>
         </div>
       </StyledProfile>
@@ -64,7 +65,7 @@ const StyledProfile = styled.div`
     position: relative;
     top: 0.7rem;
 
-    & > img {
+    & > svg {
       position: relative;
       width: 0.4rem;
       height: 0.4rem;
