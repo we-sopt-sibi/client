@@ -10,6 +10,7 @@ const ArticleBodyFooter = () => {
   const handleLikeClick = () => {
     setIsLikeClicked(!isLikeClicked);
   };
+
   return (
     <StyledBodyFooterWrapper>
       <StyledTags>
