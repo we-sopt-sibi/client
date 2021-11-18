@@ -7,13 +7,15 @@ const ArticleList = () => {
   return (
     <StyledWrapper>
       <ListHeader />
-      <div>
+      <div className="body">
         <section>
-          <ListItem />
+          <article>
+            <ListItem />
+          </article>
+          <aside>
+            <UserList />
+          </aside>
         </section>
-        <aside>
-          <UserList />
-        </aside>
       </div>
     </StyledWrapper>
   );
@@ -23,4 +25,29 @@ export default ArticleList;
 
 const StyledWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.gray100};
+
+  .body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .body section {
+    display: flex;
+    justify-content: space-between;
+    width: 120rem;
+    height: 100%;
+  }
+
+  .body section article {
+    width: 96rem;
+    height: 100%;
+  }
+
+  .body section aside {
+    width: 22rem;
+    height: 35.7rem;
+  }
 `;
