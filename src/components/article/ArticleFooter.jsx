@@ -21,4 +21,12 @@ const StyledWrapper = styled.footer`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media ${({ theme }) => theme.device.tablet} {
+    height: 190.4rem;
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    height: 168rem;
+  }
 `;

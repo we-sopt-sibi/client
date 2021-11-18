@@ -30,6 +30,14 @@ const StyledWrapper = styled.section`
   width: 70rem;
   margin-top: 6rem;
   margin-bottom: 5.6rem;
+
+  @media ${({ theme }) => theme.device.tablet} {
+    width: 64rem;
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    width: 32rem;
+  }
 `;
 
 const StyledTextBox = styled.div`
