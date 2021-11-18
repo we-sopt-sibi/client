@@ -39,6 +39,7 @@ const theme = {
   colors,
   deviceSizes,
   device,
+  scrollWidth: "0.5rem",
 };
 
 export default theme;
