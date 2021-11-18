@@ -14,7 +14,8 @@ export default Banner;
 const StyledBanner = styled.div`
   background-color: #a99582;
   position: absolute;
-  width: 192rem;
+  /* width: 192rem; */
+  width: 100%;
   height: 30rem;
   bottom: 6rem;
   display: flex;
