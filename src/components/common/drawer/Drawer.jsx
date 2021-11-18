@@ -38,7 +38,7 @@ export default Drawer;
 
 const StyledWrapper = styled.section`
   position: absolute;
-  width: 26rem;
+  width: 26.1rem;
   height: 108rem;
   left: 0;
   top: 0;
@@ -74,5 +74,13 @@ const StyledWrapper = styled.section`
     100% {
       transform: translateX(-100%);
     }
+  }
+
+  @media ${({ theme }) => theme.device.tablet} {
+    width: 26rem;
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    width: 20.5rem;
   }
 `;

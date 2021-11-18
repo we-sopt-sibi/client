@@ -1,14 +1,13 @@
-// import { ArticleBody, ArticleBodyFooter, ArticleComment, ArticleFooter, ArticleHeader } from "../components";
-import { ArticleFooter } from "../components";
+import { ArticleBody, ArticleBodyFooter, ArticleComment, ArticleFooter, ArticleHeader } from "../components";
 import styled from "styled-components";
 
 const Article = () => {
   return (
     <StyledArticleWrapper>
-      {/* <ArticleHeader />
+      <ArticleHeader />
       <ArticleBody />
       <ArticleBodyFooter />
-      <ArticleComment /> */}
+      <ArticleComment />
       <ArticleFooter />
     </StyledArticleWrapper>
   );
