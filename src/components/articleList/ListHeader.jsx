@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import ArrowIcon from "../../assets/icons/arrow.svg";
 
 const ListHeader = () => {
-  const tagData = [
+  const [tagData, setTagData] = useState([
     "IT",
     "인공지능",
     "스마트폰",
@@ -22,7 +22,52 @@ const ListHeader = () => {
     "UI",
     "UI",
     "아이패드",
-  ];
+  ]);
+  const [added, setAdded] = useState(false);
+
+  const addTags = () => {
+    setTagData((currentArray) => [
+      ...currentArray,
+      "IT",
+      "인공지능",
+      "스마트폰",
+      "아이패드",
+      "인스타그램",
+      "아이패드",
+      "페이스북",
+      "구글",
+      "스마트폰",
+      "애플",
+      "아이패드",
+      "UX",
+      "아이폰",
+      "모바일",
+      "VR",
+      "UI",
+      "UI",
+      "아이패드",
+      "IT",
+      "인공지능",
+      "스마트폰",
+      "아이패드",
+      "페이스북",
+      "스마트폰",
+      "애플",
+      "UX",
+      "아이폰",
+      "VR",
+    ]);
+    setAdded(true);
+  };
+
+  const removeTags = () => {
+    setTagData((currentArray) => {
+      const newArray = [...currentArray];
+      newArray.splice(18, 28);
+      return newArray;
+    });
+    setAdded(false);
+  };
   return (
     <StyledWrapper>
       <div>
@@ -31,7 +76,7 @@ const ListHeader = () => {
             <button key={`tag-${idx}`}>{tags}</button>
           ))}
         </div>
-        <div className="more">
+        <div onClick={added ? removeTags : addTags} className="more">
           <span>더보기</span>
           <img src={ArrowIcon} alt="arrow" />
         </div>
@@ -44,33 +89,36 @@ export default ListHeader;
 
 const StyledWrapper = styled.div`
   width: 100%;
-  height: 8rem;
+  min-height: 7rem;
   background-color: ${({ theme }) => theme.colors.white};
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid ${({ theme }) => theme.colors.gray300};
 
-  & > div:first-child {
+  & > div {
     width: 120rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 2.6rem;
+    min-height: 2.6rem;
   }
   .tags {
     display: flex;
+    flex-wrap: wrap;
     width: 108.5rem;
+    height: 100%;
   }
 
   .tags button {
-    margin-right: 0.8rem;
     font-size: ${({ theme }) => theme.fontSizes.caption};
     font-weight: 300;
     color: ${({ theme }) => theme.colors.gray600};
     border-radius: 1.4rem;
     line-height: 1;
     padding: 0.4rem 1rem;
+    margin: 0.5rem 0.8rem;
+    margin-left: 0;
     letter-spacing: -0.04em;
     align-items: center;
   }
