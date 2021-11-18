@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ReactComponent as ArticleContent } from "../../assets/images/articleContent2.svg";
-// import { ReactComponent as ArticleContent2 } from "../../assets/images/articleContent2.svg";
+import { ReactComponent as ArticleImage } from "../../assets/images/articleImage.svg";
 
 const ArticleBody = () => {
   return (
@@ -15,7 +15,7 @@ const ArticleBody = () => {
           수 있다. 내 경력을 통해 좋은 컬러 스킴은 사용자에게 잘 받아들여지고 호소력 있는 사이트를 만드는데 관련이
           깊다는 것을 배웠다.
         </p>
-        <ArticleContent />
+        <ArticleImage />
 
         <h3>Palette outline : 60-30-10 ratio</h3>
         <p>
@@ -34,9 +34,7 @@ const ArticleBody = () => {
 export default ArticleBody;
 
 const StyledBodyWrapper = styled.article`
-  /* position: relative;
-  left: 0;
-  top: 27.1rem; */
+  top: 27.1rem;
   width: 100%;
   height: 100%;
   margin-top: 3.2rem;
