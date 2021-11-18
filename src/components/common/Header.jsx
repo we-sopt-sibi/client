@@ -9,19 +9,30 @@ const Header = ({ showDrawer, setShowDrawer }) => {
   const { pathname } = useLocation();
 
   return (
-    <StyledWrapper pathname={pathname}>
-      <Drawer showDrawer={showDrawer} />
-      <StyledIconWrapper>
-        <NavIcon alt="hamburger" onClick={() => setShowDrawer(true)} />
-        <LogoIcon alt="logo" />
-      </StyledIconWrapper>
-      <span>IT 트렌드</span>
-      {pathname === "/" ? <NavIconWrapper /> : <SearchIcon alt="search" />}
-    </StyledWrapper>
+    <StyledHeader>
+      <StyledWrapper pathname={pathname}>
+        <Drawer showDrawer={showDrawer} />
+        <StyledIconWrapper>
+          <NavIcon alt="hamburger" onClick={() => setShowDrawer(true)} />
+          <LogoIcon alt="logo" />
+        </StyledIconWrapper>
+        <span>IT 트렌드</span>
+        {pathname === "/" ? <NavIconWrapper /> : <SearchIcon alt="search" />}
+      </StyledWrapper>
+    </StyledHeader>
   );
 };
 
 export default Header;
+
+const StyledHeader = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 46rem;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.gray300};
+`;
 
 const StyledWrapper = styled.header`
   position: relative;
