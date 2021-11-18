@@ -1,5 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
 import styled from "styled-components";
 import CenterDotIcon from "../../assets/icons/centerDot.svg";
 
@@ -59,11 +58,3 @@ const StyledWrapper = styled.div`
     margin-right: 0.6rem;
   }
 `;
-=======
-
-const ListItem = () => {
-  return <div></div>;
-};
-
-export default ListItem;
->>>>>>> 83cf7d9 (:tada: feat: 헤더 틀 잡기)
