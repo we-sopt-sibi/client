@@ -17,6 +17,8 @@ export default ArticleRecommended;
 const StyledWrapper = styled.article`
   display: flex;
   flex-direction: column;
+  max-width: 30rem;
+  max-height: 33.7rem;
 
   & > h1 {
     margin-top: 2.6rem;

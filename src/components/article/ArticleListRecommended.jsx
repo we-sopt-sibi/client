@@ -64,8 +64,19 @@ const ArticleListRecommended = () => {
 export default ArticleListRecommended;
 
 const StyledWrapper = styled.section`
-  display: grid;
-  grid-template-columns: repeat(4, 30rem);
-  grid-row-gap: 4rem;
-  grid-column-gap: 6.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 132rem;
+  height: 73.9rem;
+  overflow: hidden;
+
+  @media ${({ theme }) => theme.device.tablet} {
+    width: 64rem;
+    height: 114.1rem;
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    width: 30rem;
+  }
 `;
