@@ -42,6 +42,7 @@ const StyledWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.gray300};
 
   & > div:first-child {
     width: 120rem;
@@ -53,5 +54,14 @@ const StyledWrapper = styled.div`
   .tags {
     display: flex;
     width: 108.5rem;
+  }
+
+  .tags button {
+    margin-right: 0.8rem;
+    font-size: ${({ theme }) => theme.fontSizes.caption};
+    color: ${({ theme }) => theme.colors.gray600};
+    border-radius: 1.4rem;
+    line-height: 1.7rem;
+    padding: 0.4rem 1.05rem;
   }
 `;

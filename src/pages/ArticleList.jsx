@@ -104,17 +104,6 @@ const ArticleList = () => {
       time: 2,
       writer: "이지현",
     },
-    {
-      title: "웹 디자인을 위한 컬러 선택",
-      subTitle:
-        "색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 브랜드 인지와 색상도 분명히 연관이 있으며 당신이 선택한",
-      etx: "좋아요",
-      like: 199,
-      comment: 1,
-      share: 384,
-      time: 2,
-      writer: "이지현",
-    },
   ];
   return (
     <StyledWrapper>

@@ -14,9 +14,9 @@ const ListItem = ({ datum }) => {
         <img src={CenterDotIcon} alt="dot" />
         <span>공유{datum.share}</span>
         <img src={CenterDotIcon} alt="dot" />
-        <span>{datum.time}시간전</span>
+        <span>{datum.time}시간 전</span>
         <img src={CenterDotIcon} alt="dot" />
-        <span>by{datum.writer}</span>
+        <span>by {datum.writer}</span>
       </div>
     </StyledWrapper>
   );
@@ -31,17 +31,30 @@ const StyledWrapper = styled.div`
   margin-bottom: 1.5rem;
   padding-top: 2.7rem;
   padding-left: 3rem;
+  border-bottom: 0.1rem solid ${({ theme }) => theme.colors.gray300};
 
   .subTitle {
     font-size: ${({ theme }) => theme.fontSizes.subTitle1};
     margin-bottom: 0.5rem;
+    line-height: 1.8;
   }
 
   .paragraph2 {
     font-size: ${({ theme }) => theme.fontSizes.paragraph2};
+    line-height: 1.8;
+    margin-bottom: 1.7rem;
+    letter-spacing: -0.04em;
+    width: 74.9rem;
   }
 
   .caption {
     display: flex;
+    color: ${({ theme }) => theme.colors.gray600};
+    font-size: ${({ theme }) => theme.fontSizes.caption};
+  }
+
+  .caption img {
+    margin-left: 0.9rem;
+    margin-right: 0.6rem;
   }
 `;
