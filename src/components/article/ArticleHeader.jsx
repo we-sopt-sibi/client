@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as ArticleWriter } from "../../assets/images/articleWriter.svg";
+import { ReactComponent as ArticleWriter } from "../../assets/images/writerProfile28dp.svg";
 import { ReactComponent as Dot } from "../../assets/icons/dot.svg";
 
 const ArticleHeader = () => {
@@ -27,10 +27,6 @@ const StyledHeaderWrapper = styled.header`
   align-items: flex-start;
   position: relative;
   margin-top: 27.1rem;
-  /* position: relative;
-  height: 15.7rem;
-  left: 0;
-  top: 27.1rem; */
   width: 100%;
 
   & > h1 {
