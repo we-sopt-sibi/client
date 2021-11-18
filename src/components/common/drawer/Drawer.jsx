@@ -78,9 +78,11 @@ const StyledWrapper = styled.section`
 
   @media ${({ theme }) => theme.device.tablet} {
     width: 26rem;
+    height: 102.8rem;
   }
 
   @media ${({ theme }) => theme.device.mobile} {
     width: 20.5rem;
+    height: 64rem;
   }
 `;

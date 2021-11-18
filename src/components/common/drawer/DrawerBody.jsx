@@ -39,11 +39,11 @@ const MyProfile = styled.nav`
   @media ${({ theme }) => theme.device.mobile} {
     & > section {
       color: ${({ theme }) => theme.colors.black};
-
-      & > div {
-        display: none;
-      }
     }
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    margin-bottom: 2.2rem;
   }
 `;
 
@@ -66,6 +66,12 @@ const DrawerNav = styled.nav`
     & > div {
       width: 5.3rem;
       border: 0.05rem solid #f1f1f1;
+    }
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    & > :nth-child(1) {
+      margin-bottom: 2.3rem;
     }
   }
 `;

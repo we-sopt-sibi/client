@@ -51,4 +51,13 @@ const StyledSection = styled.div`
     right: 0;
     top: 0;
   }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    width: 13.2rem;
+    height: 5.8rem;
+
+    & > p {
+      font: 1rem/1.6rem NanumMyeongjo;
+    }
+  }
 `;

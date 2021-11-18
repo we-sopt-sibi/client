@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const DrawerMenu = ({ menu, isProfile }) => {
   return (
@@ -19,18 +19,9 @@ const StyledMenu = styled.section`
   width: 14rem;
   line-height: 1.8;
 
-  ${(props) =>
-    props.isProfile
-      ? css`
-          & + section {
-            margin-top: 1.9rem;
-          }
-        `
-      : css`
-          & + section {
-            margin-top: 1.3rem;
-          }
-        `}
+  & + section {
+    margin-top: ${(props) => (props.isProfile ? "margin-top: 1.9rem" : "margin-top: 1.3rem")};
+  }
 
   &:hover {
     color: ${({ theme }) => theme.colors.main};
@@ -50,5 +41,13 @@ const StyledMenu = styled.section`
   & > span {
     cursor: pointer;
     margin: 0 0.9rem;
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    font-size: ${({ theme }) => theme.fontSizes.page};
+
+    & + section {
+      margin-top: 1.2rem;
+    }
   }
 `;

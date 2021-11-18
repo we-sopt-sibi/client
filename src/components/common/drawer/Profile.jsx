@@ -55,4 +55,13 @@ const StyledWrapper = styled.section`
     font-family: Georgia;
     font-size: ${({ theme }) => theme.fontSizes.caption};
   }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    height: 18.7rem;
+
+    & > svg {
+      right: 1rem;
+      top: 1rem;
+    }
+  }
 `;
