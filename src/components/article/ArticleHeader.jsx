@@ -26,9 +26,11 @@ const StyledHeaderWrapper = styled.header`
   flex-direction: column;
   align-items: flex-start;
   position: relative;
+  margin-top: 27.1rem;
+  /* position: relative;
   height: 15.7rem;
   left: 0;
-  top: 27.1rem;
+  top: 27.1rem; */
   width: 100%;
 
   & > h1 {

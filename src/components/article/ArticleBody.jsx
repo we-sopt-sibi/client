@@ -18,7 +18,6 @@ const ArticleBody = () => {
         <ArticleContent />
 
         <h3>Palette outline : 60-30-10 ratio</h3>
-        <ArticleContent />
         <p>
           색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 색상은 좋은 웹디자인을 만들기
           위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며, 매우
@@ -26,6 +25,7 @@ const ArticleBody = () => {
           색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 색상은 좋은 웹디자인을 만들기
           위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며
         </p>
+        <ArticleContent />
       </StyledBodyWrapper>
     </>
   );
@@ -34,19 +34,20 @@ const ArticleBody = () => {
 export default ArticleBody;
 
 const StyledBodyWrapper = styled.article`
-  position: relative;
+  /* position: relative;
   left: 0;
-  top: 27.1rem;
+  top: 27.1rem; */
   width: 100%;
   height: 100%;
   margin-top: 3.2rem;
+  margin-bottom: 10.9rem;
   padding-top: 3.2rem;
 
-  & > img {
+  & > svg {
     width: 100%;
     height: 67.2rem;
     object-fit: cover;
-    margin: 6.4rem 0;
+    padding-bottom: 6.4rem;
   }
 
   & > p {
@@ -56,6 +57,7 @@ const StyledBodyWrapper = styled.article`
     line-height: 180%;
     letter-spacing: -0.04em;
     color: ${({ theme }) => theme.colors.black};
+    margin-bottom: 6.4rem;
   }
 
   & > h3 {

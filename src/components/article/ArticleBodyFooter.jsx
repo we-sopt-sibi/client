@@ -47,6 +47,7 @@ const StyledBodyFooterWrapper = styled.footer`
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 3.3rem;
 `;
 
 const StyledTags = styled.ul`
@@ -78,6 +79,14 @@ const StyledButtons = styled.div`
       color: ${({ theme }) => theme.colors.white};
       border: 0;
       background-color: ${({ theme }) => theme.colors.main};
+
+      & > svg {
+        margin-right: 0.6em;
+        & > path {
+          fill: ${({ theme }) => theme.colors.white};
+        }
+      }
+
       & > span + span {
         color: ${({ theme }) => theme.colors.white};
       }
@@ -96,7 +105,7 @@ const StyledButtons = styled.div`
     & > svg {
       margin-right: 0.6em;
       & > path {
-        fill: ${({ theme }) => theme.colors.black};
+        fill: ${({ theme }) => theme.colors.gray600};
       }
     }
 
