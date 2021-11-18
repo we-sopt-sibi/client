@@ -46,7 +46,6 @@ export const GlobalStyle = createGlobalStyle`
     color: #333333;
     font-family: NotoSansKR;
     font-size: 10px;
-    line-height: 1.8;
   }
 
   #root {
