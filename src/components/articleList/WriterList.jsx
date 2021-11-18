@@ -12,7 +12,7 @@ const WriterList = () => {
   const writers = [
     {
       writerProfile: Writer3,
-      writerName: "정헤인",
+      writerName: "정혜인",
       writerPosts: 42,
       writerSubs: 183,
     },
