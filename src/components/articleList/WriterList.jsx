@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const UserList = () => {
+const WriterList = () => {
   return <StyledWrapper>aside</StyledWrapper>;
 };
 
-export default UserList;
+export default WriterList;
 
 const StyledWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
