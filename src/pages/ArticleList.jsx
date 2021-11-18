@@ -2,6 +2,7 @@ import ListHeader from "../components/articleList/ListHeader";
 import styled from "styled-components";
 import ListItem from "../components/articleList/ListItem";
 import WriterList from "../components/articleList/WriterList";
+import ListFooter from "../components/articleList/ListFooter";
 
 const ArticleList = () => {
   const tempData = [
@@ -114,6 +115,7 @@ const ArticleList = () => {
             {tempData.map((datum, idx) => (
               <ListItem key={`data-${idx}`} datum={datum} />
             ))}
+            <ListFooter />
           </article>
           <aside>
             <WriterList />
