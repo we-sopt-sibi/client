@@ -69,6 +69,7 @@ const StyledWrapper = styled.section`
   justify-content: space-between;
   width: 132rem;
   height: 73.9rem;
+  // 처음 8개 -> 6개 -> 3개로 변화시킬 방법 찾는 중
   overflow: hidden;
 
   @media ${({ theme }) => theme.device.tablet} {
