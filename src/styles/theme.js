@@ -30,7 +30,7 @@ const deviceSizes = {
 };
 
 const device = {
-  mobileS: `only screen and (max-width: ${deviceSizes.mobile})`,
+  mobile: `only screen and (max-width: ${deviceSizes.mobile})`,
   tablet: `only screen and (max-width: ${deviceSizes.tablet})`,
 };
 
@@ -39,6 +39,7 @@ const theme = {
   colors,
   deviceSizes,
   device,
+  scrollWidth: "0.5rem",
 };
 
 export default theme;

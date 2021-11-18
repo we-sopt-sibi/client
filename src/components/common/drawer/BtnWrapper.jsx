@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const BtnWrapper = ({ section, buttons }) => {
   return (
@@ -25,12 +25,35 @@ const StyledBtnWrapper = styled.section`
     width: 8rem;
     height: 3.1rem;
     justify-content: center;
+    font-size: ${({ theme }) => theme.fontSizes.paragraph1};
 
     & + button {
       margin-left: ${(props) =>
         props.section === "profile" ? "1.2rem" : props.section === "drawerFooter" ? "0.6rem" : "0.8rem"};
       border-color: ${(props) => props.button2};
       color: ${(props) => props.button2};
+    }
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    margin-top: ${(props) =>
+      props.section === "profile" ? "1.5rem" : props.section === "drawerFooter" ? "1.6rem" : "2.6rem"};
+
+    & > button {
+      width: 6.3rem;
+      height: 2.3rem;
+      ${(props) =>
+        props.section === "writerInfo"
+          ? css`
+              font-size: ${({ theme }) => theme.fontSizes.paragraph1};
+              width: 8rem;
+              height: 3.1rem;
+            `
+          : css`
+              font-size: ${({ theme }) => theme.fontSizes.page};
+              width: 6.3rem;
+              height: 2.3rem;
+            `};
     }
   }
 `;

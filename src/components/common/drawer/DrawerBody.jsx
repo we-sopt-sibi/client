@@ -1,16 +1,15 @@
 import styled from "styled-components";
+import { DrawerMenu } from "../..";
 import { ReactComponent as Logo } from "../../../assets/icons/logoMini.svg";
 
 const DrawerBody = () => {
+  const menuList = ["브런치 홈", "실시간 브런치", "출간된 브런치", "최근 본 브런치", "구독한 브런치"];
+
   return (
     <section>
       <MyProfile>
-        <section>
-          <div />
-          <span>내 프로필</span>
-          <div />
-        </section>
-        <span>작성한 브런치</span>
+        <DrawerMenu menu="내 프로필" isProfile={true} />
+        <DrawerMenu menu="작성한 브런치" isProfile={true} />
       </MyProfile>
       <DrawerNav>
         <section>
@@ -18,11 +17,9 @@ const DrawerBody = () => {
           <Logo alt="logoMini" />
           <div />
         </section>
-        <span>브런치 홈</span>
-        <span>실시간 브런치</span>
-        <span>출간된 브런치</span>
-        <span>최근 본 브런치</span>
-        <span>구독한 브런치</span>
+        {menuList.map((menu, idx) => (
+          <DrawerMenu key={`menu-${idx}`} menu={menu} isProfile={false} />
+        ))}
       </DrawerNav>
     </section>
   );
@@ -36,22 +33,17 @@ const MyProfile = styled.nav`
   align-items: center;
   font-size: ${({ theme }) => theme.fontSizes.paragraph1};
   letter-spacing: -0.04em;
+  margin-top: 4rem;
+  margin-bottom: 3.6rem;
 
-  & > section {
-    display: flex;
-    align-items: center;
-    color: ${({ theme }) => theme.colors.main};
-    margin-bottom: 1.9rem;
-    margin-top: 4.1rem;
-
-    & > div {
-      width: 3.5rem;
-      border: 0.05rem solid ${({ theme }) => theme.colors.main};
+  @media ${({ theme }) => theme.device.mobile} {
+    & > section {
+      color: ${({ theme }) => theme.colors.black};
     }
+  }
 
-    & > span {
-      margin: 0.8rem;
-    }
+  @media ${({ theme }) => theme.device.mobile} {
+    margin-bottom: 2.2rem;
   }
 `;
 
@@ -62,26 +54,24 @@ const DrawerNav = styled.nav`
   font-size: ${({ theme }) => theme.fontSizes.paragraph1};
   letter-spacing: -0.04em;
 
-  & > section {
+  & > :nth-child(1) {
     display: flex;
     align-items: center;
-    color: ${({ theme }) => theme.colors.main};
     margin-bottom: 3.9rem;
-    margin-top: 3.6rem;
-
-    & > div {
-      width: 5.4rem;
-      border: 0.05rem solid #f1f1f1;
-    }
 
     & > svg {
-      margin: 1rem;
+      margin: 0 1rem;
+    }
+
+    & > div {
+      width: 5.3rem;
+      border: 0.05rem solid #f1f1f1;
     }
   }
 
-  & > span {
-    & + span {
-      margin-top: 1.8rem;
+  @media ${({ theme }) => theme.device.mobile} {
+    & > :nth-child(1) {
+      margin-bottom: 2.3rem;
     }
   }
 `;

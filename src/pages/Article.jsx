@@ -1,13 +1,14 @@
-import { ArticleBody, ArticleBodyFooter, ArticleComment, ArticleFooter, ArticleHeader } from "../components";
+// import { ArticleBody, ArticleBodyFooter, ArticleComment, ArticleFooter, ArticleHeader } from "../components";
+import { ArticleFooter } from "../components";
 import styled from "styled-components";
 
 const Article = () => {
   return (
     <StyledArticleWrapper>
-      <ArticleHeader />
+      {/* <ArticleHeader />
       <ArticleBody />
       <ArticleBodyFooter />
-      <ArticleComment />
+      <ArticleComment /> */}
       <ArticleFooter />
     </StyledArticleWrapper>
   );
@@ -21,7 +22,7 @@ const StyledArticleWrapper = styled.section`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  width: 120rem;
+  /* width: 120rem; */
   height: 100%;
   position: relative;
 `;

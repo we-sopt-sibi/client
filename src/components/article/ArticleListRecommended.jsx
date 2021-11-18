@@ -64,8 +64,28 @@ const ArticleListRecommended = () => {
 export default ArticleListRecommended;
 
 const StyledWrapper = styled.section`
-  display: grid;
-  grid-template-columns: repeat(4, 30rem);
-  grid-row-gap: 4rem;
-  grid-column-gap: 6.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* row-gap: 6.5rem; */
+  width: 132rem;
+  height: 73.9rem;
+  overflow: hidden;
+
+  @media ${({ theme }) => theme.device.tablet} {
+    width: 64rem;
+    height: 114.1rem;
+
+    & > article:nth-child(n + 7) {
+      display: none;
+    }
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    width: 30rem;
+
+    & > article:nth-child(n + 4) {
+      display: none;
+    }
+  }
 `;

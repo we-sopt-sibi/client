@@ -23,8 +23,14 @@ const DrawerFooter = () => {
 export default DrawerFooter;
 
 const StyledWrapper = styled.section`
-  margin-top: 30.2rem;
+  position: absolute;
+  bottom: 3rem;
+
+  @media ${({ theme }) => theme.device.mobile} {
+    bottom: 2.6rem;
+  }
 `;
+
 const StyledSection = styled.div`
   position: relative;
   width: 16.8rem;
@@ -44,5 +50,14 @@ const StyledSection = styled.div`
     position: absolute;
     right: 0;
     top: 0;
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    width: 13.2rem;
+    height: 5.8rem;
+
+    & > p {
+      font: 1rem/1.6rem NanumMyeongjo;
+    }
   }
 `;
