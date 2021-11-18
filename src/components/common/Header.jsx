@@ -11,10 +11,10 @@ const Header = ({ showDrawer, setShowDrawer }) => {
   return (
     <StyledWrapper pathname={pathname}>
       <Drawer showDrawer={showDrawer} />
-      <section>
+      <StyledIconWrapper>
         <NavIcon alt="hamburger" onClick={() => setShowDrawer(true)} />
         <LogoIcon alt="logo" />
-      </section>
+      </StyledIconWrapper>
       <span>IT 트렌드</span>
       {pathname === "/" ? <NavIconWrapper /> : <SearchIcon alt="search" />}
     </StyledWrapper>
@@ -32,14 +32,23 @@ const StyledWrapper = styled.header`
   justify-content: space-between;
   padding: 1.9rem 2rem;
 
-  & > section > svg {
-    height: 4.2rem;
-  }
-
   & > span {
     visibility: ${(props) => (props.pathname === "/" ? "hidden" : "visible")};
     font-size: ${({ theme }) => theme.fontSizes.title};
     position: relative;
     bottom: -0.7rem;
+  }
+`;
+
+const StyledIconWrapper = styled.section`
+  display: flex;
+  width: 12.7rem;
+  align-items: center;
+  justify-content: space-between;
+
+  @media ${({ theme }) => theme.device.mobile} {
+    & > :nth-child(2) {
+      display: none;
+    }
   }
 `;

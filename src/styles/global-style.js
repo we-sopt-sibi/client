@@ -4,35 +4,41 @@ import reset from "styled-reset";
 export const GlobalStyle = createGlobalStyle`
   ${reset}
 
+  ::-webkit-scrollbar {
+    width: ${({ theme }) => theme.scrollWidth};
+    height: ${({ theme }) => theme.scrollWidth};
+  }
+
+  ::-webkit-scrollbar-track {
+  background-color: ${({ theme }) => theme.colors.gray300};
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: white; 
+  }
+
   * {
     box-sizing: border-box;
   }
 
   @font-face {
     font-family: "NotoSansKR-Regular";
-    font-weight: normal;
-    font-style: normal;
     src: url("/fonts/NotoSansKR-Regular.otf") format("opentype");
   }
 
   @font-face {
     font-family: "NotoSansKR";
-    font-weight: normal;
-    font-style: normal;
     src: url("/fonts/NotoSansKR-Light.otf") format("opentype");
   }
 
   @font-face {
     font-family: "NanumMyeongjo";
-    font-weight: normal;
-    font-style: normal;
     src: url("/fonts/NanumMyeongjo-Regular.ttf") format("truetype");
   }
 
   @font-face {
     font-family: "Georgia";
-    font-weight: normal;
-    font-style: normal;
     src: url("/fonts/georgia italic.ttf") format("truetype");
   }
 
@@ -41,6 +47,10 @@ export const GlobalStyle = createGlobalStyle`
     font-family: NotoSansKR;
     font-size: 10px;
     line-height: 1.8;
+  }
+
+  #root {
+    width: calc(100% - ${({ theme }) => theme.scrollWidth});
   }
 
   a {

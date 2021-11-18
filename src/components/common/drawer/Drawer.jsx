@@ -38,7 +38,7 @@ export default Drawer;
 
 const StyledWrapper = styled.section`
   position: absolute;
-  width: 26rem;
+  width: 26.1rem;
   height: 108rem;
   left: 0;
   top: 0;
@@ -47,6 +47,7 @@ const StyledWrapper = styled.section`
   flex-direction: column;
   align-items: center;
   border-right: 0.1rem solid ${({ theme }) => theme.colors.gray300};
+  z-index: 3;
 
   ${({ showDrawer }) =>
     showDrawer
@@ -73,5 +74,15 @@ const StyledWrapper = styled.section`
     100% {
       transform: translateX(-100%);
     }
+  }
+
+  @media ${({ theme }) => theme.device.tablet} {
+    width: 26rem;
+    height: 102.8rem;
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    width: 20.5rem;
+    height: 64rem;
   }
 `;

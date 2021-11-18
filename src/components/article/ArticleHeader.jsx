@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { ArticleProfileWriter, Dot } from "../../assets/images";
+import { ReactComponent as ArticleWriter } from "../../assets/images/writerProfile28dp.svg";
+import { ReactComponent as Dot } from "../../assets/icons/dot.svg";
 
 const ArticleHeader = () => {
   return (
@@ -7,10 +8,10 @@ const ArticleHeader = () => {
       <h1>웹 디자인을 위한 컬러 선택</h1>
       <h2>실용적인 UI 컬러 적용 가이드</h2>
       <StyledProfile>
-        <img src={ArticleProfileWriter} alt="" />
+        <ArticleWriter />
         <div>
           <span>by</span> <span>이지현</span>
-          <img src={Dot} alt="" />
+          <Dot />
           <span>Aug 19,2020</span>
         </div>
       </StyledProfile>
@@ -24,10 +25,9 @@ const StyledHeaderWrapper = styled.header`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  position: absolute;
-  height: 15.7rem;
-  left: 0;
-  top: 27.1rem;
+  position: relative;
+  margin-top: 27.1rem;
+  width: 100%;
 
   & > h1 {
     font-size: ${({ theme }) => theme.fontSizes.headLint};
@@ -53,7 +53,7 @@ const StyledProfile = styled.div`
   margin-top: 4.2rem;
   position: relative;
 
-  & > img {
+  & > svg {
     height: 2.8rem;
     width: 2.8rem;
     margin-right: 0.6rem;
@@ -63,7 +63,7 @@ const StyledProfile = styled.div`
     position: relative;
     top: 0.7rem;
 
-    & > img {
+    & > svg {
       position: relative;
       width: 0.4rem;
       height: 0.4rem;

@@ -3,6 +3,11 @@ import styled from "styled-components";
 import BtnWrapper from "./BtnWrapper";
 
 const DrawerFooter = () => {
+  const buttons = {
+    button1: ["설정", "#959595"],
+    button2: ["로그아웃", "#959595"],
+  };
+
   return (
     <StyledWrapper>
       <StyledSection>
@@ -10,7 +15,7 @@ const DrawerFooter = () => {
         <p>프로젝트 보러가기</p>
         <Logo alt="logo" fill="red" />
       </StyledSection>
-      <BtnWrapper />
+      <BtnWrapper section={"drawerFooter"} buttons={buttons} />
     </StyledWrapper>
   );
 };
@@ -18,8 +23,14 @@ const DrawerFooter = () => {
 export default DrawerFooter;
 
 const StyledWrapper = styled.section`
-  margin-top: 30.2rem;
+  position: absolute;
+  bottom: 3rem;
+
+  @media ${({ theme }) => theme.device.mobile} {
+    bottom: 2.6rem;
+  }
 `;
+
 const StyledSection = styled.div`
   position: relative;
   width: 16.8rem;
@@ -39,5 +50,14 @@ const StyledSection = styled.div`
     position: absolute;
     right: 0;
     top: 0;
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    width: 13.2rem;
+    height: 5.8rem;
+
+    & > p {
+      font: 1rem/1.6rem NanumMyeongjo;
+    }
   }
 `;
