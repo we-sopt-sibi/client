@@ -16,7 +16,6 @@ const StyledMenu = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 14rem;
   line-height: 1.8;
 
   & + section {
@@ -34,7 +33,7 @@ const StyledMenu = styled.section`
 
   & > div {
     visibility: hidden;
-    flex: 1;
+    width: 2.5rem;
     border: 0.05rem solid ${({ theme }) => theme.colors.black};
   }
 
