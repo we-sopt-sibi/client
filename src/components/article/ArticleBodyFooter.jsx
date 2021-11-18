@@ -47,6 +47,7 @@ const StyledBodyFooterWrapper = styled.footer`
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 3.3rem;
 `;
 
 const StyledTags = styled.ul`

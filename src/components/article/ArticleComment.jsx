@@ -46,6 +46,7 @@ const StyledCommentWrapper = styled.div`
 const StyledCommentHeader = styled.div`
   color: ${({ theme }) => theme.colors.black};
   font-size: ${({ theme }) => theme.fontSizes.paragraph2};
+  padding-top: 2.6rem;
   padding-bottom: 2.4rem;
   border-bottom: 1px solid ${({ theme }) => theme.colors.gray300};
 
