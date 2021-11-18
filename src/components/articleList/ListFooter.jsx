@@ -27,5 +27,12 @@ const StyledWrapper = styled.div`
     font-size: ${({ theme }) => theme.fontSizes.page};
     line-height: 1.4rem;
     margin: 0 1.2rem;
+    transition: color 0.1s;
+  }
+
+  & > div:hover {
+    color: ${({ theme }) => theme.colors.black};
+    border-bottom: 0.2rem solid ${({ theme }) => theme.colors.black};
+    transform: translate(0, -0.5rem);
   }
 `;
