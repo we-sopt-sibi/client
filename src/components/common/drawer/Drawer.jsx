@@ -47,6 +47,7 @@ const StyledWrapper = styled.section`
   flex-direction: column;
   align-items: center;
   border-right: 0.1rem solid ${({ theme }) => theme.colors.gray300};
+  z-index: 3;
 
   ${({ showDrawer }) =>
     showDrawer
