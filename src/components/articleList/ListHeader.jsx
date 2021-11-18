@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ArrowIcon from "../../assets/icons/arrow.svg";
 
 const ListHeader = () => {
+<<<<<<< HEAD
   const tagData = [
     "IT",
     "인공지능",
@@ -23,13 +24,34 @@ const ListHeader = () => {
     "UI",
     "아이패드",
   ];
+=======
+>>>>>>> 83cf7d9 (:tada: feat: 헤더 틀 잡기)
   return (
     <StyledWrapper>
       <div>
         <div className="tags">
+<<<<<<< HEAD
           {tagData.map((tags, idx) => (
             <button key={`tag-${idx}`}>{tags}</button>
           ))}
+=======
+          <button>It</button>
+          <button>인공지능</button>
+          <button>스마트폰</button>
+          <button>아이패드</button>
+          <button>페이스북</button>
+          <button>구글</button>
+          <button>스마트폰</button>
+          <button>애플</button>
+          <button>아이패드</button>
+          <button>UX</button>
+          <button>아이폰</button>
+          <button>모바일</button>
+          <button>VR</button>
+          <button>UI</button>
+          <button>UI</button>
+          <button>아이패드</button>
+>>>>>>> 83cf7d9 (:tada: feat: 헤더 틀 잡기)
         </div>
         <div className="more">
           <span>더보기</span>
@@ -49,7 +71,10 @@ const StyledWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD
   border-bottom: 1px solid ${({ theme }) => theme.colors.gray300};
+=======
+>>>>>>> 83cf7d9 (:tada: feat: 헤더 틀 잡기)
 
   & > div:first-child {
     width: 120rem;
@@ -62,6 +87,7 @@ const StyledWrapper = styled.div`
     display: flex;
     width: 108.5rem;
   }
+<<<<<<< HEAD
 
   .tags button {
     margin-right: 0.8rem;
@@ -85,4 +111,6 @@ const StyledWrapper = styled.div`
   .more img {
     margin-left: 0.3rem;
   }
+=======
+>>>>>>> 83cf7d9 (:tada: feat: 헤더 틀 잡기)
 `;
