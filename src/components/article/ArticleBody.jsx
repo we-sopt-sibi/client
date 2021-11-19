@@ -33,11 +33,10 @@ const ArticleBody = () => {
 export default ArticleBody;
 
 const StyledBodyWrapper = styled.article`
-  width: 100%;
+  width: 120rem;
+  margin: 0 auto;
   height: 100%;
-  margin-top: 3.2rem;
-  margin-bottom: 10.9rem;
-  padding-top: 3.2rem;
+  margin-bottom: 10.6rem;
 
   & > svg {
     width: 100%;

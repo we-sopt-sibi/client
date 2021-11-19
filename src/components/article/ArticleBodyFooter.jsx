@@ -46,8 +46,9 @@ const StyledBodyFooterWrapper = styled.footer`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  margin-bottom: 3.3rem;
+  width: 120rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
 
   @media ${({ theme }) => theme.device.mobile} {
     flex-direction: column;

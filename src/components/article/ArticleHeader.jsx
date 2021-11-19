@@ -4,18 +4,20 @@ import { ReactComponent as Dot } from "../../assets/icons/dot.svg";
 
 const ArticleHeader = () => {
   return (
-    <StyledHeaderWrapper>
-      <h1>웹 디자인을 위한 컬러 선택</h1>
-      <h2>실용적인 UI 컬러 적용 가이드</h2>
-      <StyledProfile>
-        <ArticleWriter />
-        <div>
-          <span>by</span> <span>이지현</span>
-          <Dot />
-          <span>Aug 19,2020</span>
-        </div>
-      </StyledProfile>
-    </StyledHeaderWrapper>
+    <>
+      <StyledHeaderWrapper>
+        <h1>웹 디자인을 위한 컬러 선택</h1>
+        <h2>실용적인 UI 컬러 적용 가이드</h2>
+        <StyledProfile>
+          <ArticleWriter />
+          <div>
+            <span>by</span> <span>이지현</span>
+            <Dot />
+            <span>Aug 19,2020</span>
+          </div>
+        </StyledProfile>
+      </StyledHeaderWrapper>
+    </>
   );
 };
 
@@ -25,9 +27,11 @@ const StyledHeaderWrapper = styled.header`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 120rem;
+  margin: 0 auto;
   position: relative;
   margin-top: 27.1rem;
-  width: 100%;
+  margin-bottom: 3.2rem;
 
   & > h1 {
     font-size: ${({ theme }) => theme.fontSizes.headLint};

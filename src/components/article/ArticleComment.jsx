@@ -40,7 +40,8 @@ const StyledCommentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 100%;
+  width: 120rem;
+  margin: 0 auto;
 `;
 
 const StyledCommentHeader = styled.div`

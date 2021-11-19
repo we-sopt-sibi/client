@@ -26,7 +26,8 @@ export default CommentWrite;
 
 const StyledInputWrapper = styled.div`
   display: flex;
-  width: 100%;
+  width: 120rem;
+  margin: 0 auto;
   margin-top: 2.4rem;
   margin-bottom: 5rem;
 
