@@ -46,6 +46,19 @@ const StyledHeaderWrapper = styled.header`
     line-height: 180%;
     letter-spacing: -0.04em;
   }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    & > h1 {
+      font-size: ${({ theme }) => theme.fontSizes.subTitle1};
+      line-height: 3.2rem;
+      margin-bottom: 0.2rem;
+    }
+
+    & > h2 {
+      font-size: ${({ theme }) => theme.fontSizes.paragraph1};
+      line-height: 2.52;
+    }
+  }
 `;
 
 const StyledProfile = styled.div`
@@ -98,5 +111,9 @@ const StyledProfile = styled.div`
       letter-spacing: -0.04em;
       color: ${({ theme }) => theme.colors.gray300};
     }
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    margin-top: 1.2rem;
   }
 `;

@@ -26,7 +26,12 @@ const StyledArticleWrapper = styled.section`
   position: relative;
 
   @media ${({ theme }) => theme.device.tablet} {
-    width: 120rem;
-    height: 114.1rem;
+    width: calc(100% - 6.8rem);
+    height: 100%;
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    width: calc(100% - 4rem);
+    height: 100%;
   }
 `;

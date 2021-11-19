@@ -48,6 +48,11 @@ const StyledBodyFooterWrapper = styled.footer`
   justify-content: space-between;
   width: 100%;
   margin-bottom: 3.3rem;
+
+  @media ${({ theme }) => theme.device.mobile} {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const StyledTags = styled.ul`
@@ -68,6 +73,16 @@ const StyledTags = styled.ul`
 
   & > li + li {
     margin-left: 0.8rem;
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    margin-bottom: 2.4rem;
+    & > li {
+      padding: 0.8rem 1rem;
+      & > button {
+        font-size: ${({ theme }) => theme.fontSizes.caption};
+      }
+    }
   }
 `;
 
@@ -126,5 +141,12 @@ const StyledButtons = styled.div`
 
   & > button + button {
     margin-left: 0.8rem;
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    & > button {
+      font-size: ${({ theme }) => theme.fontSizes.paragraph1};
+      padding: 0.75rem 1.9rem;
+    }
   }
 `;
