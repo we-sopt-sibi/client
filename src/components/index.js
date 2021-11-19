@@ -11,6 +11,7 @@ export { default as ArticleHeader } from "./article/ArticleHeader";
 export { default as ArticleBody } from "./article/ArticleBody";
 export { default as ArticleBodyFooter } from "./article/ArticleBodyFooter";
 export { default as ArticleComment } from "./article/ArticleComment";
+export { default as ArticleCoverImage } from "./article/ArticleCoverImage";
 export { default as CommentWrite } from "./article/CommentWrite";
 export { default as ArticleFooter } from "./article/ArticleFooter";
 export { default as WriterInfo } from "./article/WriterInfo";
