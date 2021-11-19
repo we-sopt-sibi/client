@@ -26,7 +26,8 @@ export default CommentWrite;
 
 const StyledInputWrapper = styled.div`
   display: flex;
-  width: 100%;
+  width: calc(100% - 36rem);
+  margin: 0 auto;
   margin-top: 2.4rem;
   margin-bottom: 5rem;
 
@@ -37,7 +38,11 @@ const StyledInputWrapper = styled.div`
     margin-right: 1.4rem;
   }
 
+  @media ${({ theme }) => theme.device.tablet} {
+    width: calc(100% - 3.4rem);
+  }
   @media ${({ theme }) => theme.device.mobile} {
+    width: calc(100% - 2rem);
     & > img {
       display: none;
     }

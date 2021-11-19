@@ -33,11 +33,10 @@ const ArticleBody = () => {
 export default ArticleBody;
 
 const StyledBodyWrapper = styled.article`
-  width: 100%;
+  width: calc(100% - 36rem);
+  margin: 0 auto;
   height: 100%;
-  margin-top: 3.2rem;
-  margin-bottom: 10.9rem;
-  padding-top: 3.2rem;
+  margin-bottom: 10.6rem;
 
   & > svg {
     width: 100%;
@@ -66,10 +65,14 @@ const StyledBodyWrapper = styled.article`
     margin-bottom: 0.6rem;
   }
 
+  @media ${({ theme }) => theme.device.tablet} {
+    width: calc(100% - 3.4rem);
+  }
+
   @media ${({ theme }) => theme.device.mobile} {
     margin-bottom: 10.6rem;
-
-    & > svg {
+    width: calc(100% - 2rem);
+    & > svg:last-child {
       padding-bottom: 0;
     }
   }
