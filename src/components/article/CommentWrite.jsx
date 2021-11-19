@@ -29,13 +29,18 @@ const StyledInputWrapper = styled.div`
   width: 100%;
   margin-top: 2.4rem;
   margin-bottom: 5rem;
-  /* border: 1px solid tomato; */
 
   & > img {
     width: 4.2rem;
     height: 4.2rem;
     margin-left: 1.8rem;
     margin-right: 1.4rem;
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    & > img {
+      display: none;
+    }
   }
 `;
 
@@ -61,6 +66,7 @@ const StyledInput = styled.div`
     display: flex;
     justify-content: space-between;
     margin: 0 2rem 1rem 2rem;
+
     & > button {
       color: ${({ theme }) => theme.colors.gray600};
       padding: 0.6rem 2.7rem;
@@ -70,6 +76,24 @@ const StyledInput = styled.div`
     & > button:hover {
       color: ${({ theme }) => theme.colors.main};
       border-color: ${({ theme }) => theme.colors.main};
+    }
+  }
+
+  @media ${({ theme }) => theme.device.tablet} {
+    & > textarea {
+      height: 12rem;
+    }
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    & > textarea {
+      height: 12rem;
+      padding: 1.4rem 0.8rem;
+    }
+
+    & > textarea::placeholder {
+      font-size: ${({ theme }) => theme.fontSizes.paragraph1};
+      line-height: 2.52rem;
     }
   }
 `;

@@ -33,7 +33,6 @@ const ArticleBody = () => {
 export default ArticleBody;
 
 const StyledBodyWrapper = styled.article`
-  top: 27.1rem;
   width: 100%;
   height: 100%;
   margin-top: 3.2rem;
@@ -42,7 +41,7 @@ const StyledBodyWrapper = styled.article`
 
   & > svg {
     width: 100%;
-    height: 67.2rem;
+    height: 100%;
     object-fit: cover;
     padding-bottom: 6.4rem;
   }
@@ -65,5 +64,13 @@ const StyledBodyWrapper = styled.article`
     letter-spacing: -0.04em;
     color: ${({ theme }) => theme.colors.black};
     margin-bottom: 0.6rem;
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    margin-bottom: 10.6rem;
+
+    & > svg {
+      padding-bottom: 0;
+    }
   }
 `;
