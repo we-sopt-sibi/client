@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { DrawerMenu } from "../..";
-import { ReactComponent as Logo } from "../../../assets/icons/logoMini.svg";
+import { ReactComponent as LogoMini } from "../../../assets/icons/logoMini.svg";
 
 const DrawerBody = () => {
   const menuList = ["브런치 홈", "실시간 브런치", "출간된 브런치", "최근 본 브런치", "구독한 브런치"];
@@ -14,7 +14,7 @@ const DrawerBody = () => {
       <DrawerNav>
         <section>
           <div />
-          <Logo alt="logoMini" />
+          <LogoMini alt="logoMini" />
           <div />
         </section>
         {menuList.map((menu, idx) => (
