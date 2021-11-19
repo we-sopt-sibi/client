@@ -27,7 +27,7 @@ const StyledHeaderWrapper = styled.header`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 120rem;
+  width: calc(100% - 36rem);
   margin: 0 auto;
   position: relative;
   margin-top: 27.1rem;
@@ -51,7 +51,12 @@ const StyledHeaderWrapper = styled.header`
     letter-spacing: -0.04em;
   }
 
+  @media ${({ theme }) => theme.device.tablet} {
+    width: calc(100% - 3.4rem);
+  }
+
   @media ${({ theme }) => theme.device.mobile} {
+    width: calc(100% - 2rem);
     margin-top: 4.7rem;
     & > h1 {
       font-size: ${({ theme }) => theme.fontSizes.subTitle1};

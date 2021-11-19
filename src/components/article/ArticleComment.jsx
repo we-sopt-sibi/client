@@ -40,8 +40,16 @@ const StyledCommentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 120rem;
+  width: calc(100% - 36rem);
   margin: 0 auto;
+
+  @media ${({ theme }) => theme.device.tablet} {
+    width: calc(100% - 3.4rem);
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    width: calc(100% - 2rem);
+  }
 `;
 
 const StyledCommentHeader = styled.div`

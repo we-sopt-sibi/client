@@ -31,16 +31,7 @@ const StyledArticleWrapper = styled.section`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  width: 100%;
   height: 100%;
   position: relative;
-
-  @media ${({ theme }) => theme.device.tablet} {
-    width: calc(100% - 6.8rem);
-    height: 100%;
-  }
-
-  @media ${({ theme }) => theme.device.mobile} {
-    width: calc(100% - 4rem);
-    height: 100%;
-  }
 `;

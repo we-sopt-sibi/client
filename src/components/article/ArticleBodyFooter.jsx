@@ -46,11 +46,16 @@ const StyledBodyFooterWrapper = styled.footer`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 120rem;
+  width: calc(100% - 36rem);
   margin: 0 auto;
   margin-bottom: 3rem;
 
+  @media ${({ theme }) => theme.device.tablet} {
+    width: calc(100% - 3.4rem);
+  }
+
   @media ${({ theme }) => theme.device.mobile} {
+    width: calc(100% - 2rem);
     flex-direction: column;
     align-items: flex-start;
   }
