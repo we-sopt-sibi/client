@@ -48,6 +48,7 @@ const StyledHeaderWrapper = styled.header`
   }
 
   @media ${({ theme }) => theme.device.mobile} {
+    margin-top: 4.7rem;
     & > h1 {
       font-size: ${({ theme }) => theme.fontSizes.subTitle1};
       line-height: 3.2rem;
