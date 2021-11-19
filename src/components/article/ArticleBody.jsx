@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { ReactComponent as ArticleContent } from "../../assets/images/articleContent2.svg";
 import { ReactComponent as ArticleImage } from "../../assets/images/articleImage.svg";
 
 const ArticleBody = () => {
@@ -25,7 +24,7 @@ const ArticleBody = () => {
           색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 색상은 좋은 웹디자인을 만들기
           위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며
         </p>
-        <ArticleContent />
+        <ArticleImage />
       </StyledBodyWrapper>
     </>
   );

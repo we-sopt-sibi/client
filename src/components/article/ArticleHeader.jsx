@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as ArticleWriter } from "../../assets/images/writerProfile28dp.svg";
+import { ReactComponent as ArticleWriter } from "../../assets/images/articleWriter.svg";
 import { ReactComponent as Dot } from "../../assets/icons/dot.svg";
 
 const ArticleHeader = () => {

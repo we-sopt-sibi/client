@@ -21,7 +21,12 @@ const StyledArticleWrapper = styled.section`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  /* width: 120rem; */
+  width: 120rem;
   height: 100%;
   position: relative;
+
+  @media ${({ theme }) => theme.device.tablet} {
+    width: 120rem;
+    height: 114.1rem;
+  }
 `;
