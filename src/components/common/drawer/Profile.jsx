@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as NotificationIcon } from "../../../assets/icons/notification.svg";
+import { ReactComponent as Notification } from "../../../assets/icons/notification.svg";
 import { drawerProfile } from "../../../assets/images";
 import BtnWrapper from "./BtnWrapper";
 
@@ -11,7 +11,7 @@ const Profile = () => {
 
   return (
     <StyledWrapper>
-      <NotificationIcon alt="notification" />
+      <Notification alt="notification" />
       <img src={drawerProfile} alt="profile" />
       <h3>령이</h3>
       <h4>brunch.co.kr/@brunch_id</h4>

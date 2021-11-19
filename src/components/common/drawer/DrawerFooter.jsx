@@ -1,4 +1,4 @@
-import { ReactComponent as Logo } from "../../../assets/icons/logoMiniBg.svg";
+import { ReactComponent as LogoMiniBg } from "../../../assets/icons/logoMiniBg.svg";
 import styled from "styled-components";
 import BtnWrapper from "./BtnWrapper";
 
@@ -13,7 +13,7 @@ const DrawerFooter = () => {
       <StyledSection>
         <p>작가-지원</p>
         <p>프로젝트 보러가기</p>
-        <Logo alt="logo" fill="red" />
+        <LogoMiniBg alt="logo" fill="red" />
       </StyledSection>
       <BtnWrapper section={"drawerFooter"} buttons={buttons} />
     </StyledWrapper>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { ReactComponent as NavIcon } from "../../assets/icons/navHamburger.svg";
-import { ReactComponent as LogoIcon } from "../../assets/icons/logo.svg";
-import { ReactComponent as SearchIcon } from "../../assets/icons/search.svg";
+import { ReactComponent as NavHamburger } from "../../assets/icons/navHamburger.svg";
+import { ReactComponent as Logo } from "../../assets/icons/logo.svg";
+import { ReactComponent as Search } from "../../assets/icons/search.svg";
 import { Drawer, NavIconWrapper } from "..";
 import { useLocation } from "react-router";
 
@@ -9,30 +9,19 @@ const Header = ({ showDrawer, setShowDrawer }) => {
   const { pathname } = useLocation();
 
   return (
-    <StyledHeader>
-      <StyledWrapper pathname={pathname}>
-        <Drawer showDrawer={showDrawer} />
-        <StyledIconWrapper>
-          <NavIcon alt="hamburger" onClick={() => setShowDrawer(true)} />
-          <LogoIcon alt="logo" />
-        </StyledIconWrapper>
-        <span>IT 트렌드</span>
-        {pathname === "/" ? <NavIconWrapper /> : <SearchIcon alt="search" />}
-      </StyledWrapper>
-    </StyledHeader>
+    <StyledWrapper pathname={pathname}>
+      <Drawer showDrawer={showDrawer} />
+      <StyledIconWrapper>
+        <NavHamburger alt="hamburger" onClick={() => setShowDrawer(true)} />
+        <Logo alt="logo" />
+      </StyledIconWrapper>
+      <span>IT 트렌드</span>
+      {pathname === "/" ? <NavIconWrapper /> : <Search alt="search" />}
+    </StyledWrapper>
   );
 };
 
 export default Header;
-
-const StyledHeader = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 46rem;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.gray300};
-`;
 
 const StyledWrapper = styled.header`
   position: relative;
