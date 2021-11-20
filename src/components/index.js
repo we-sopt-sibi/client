@@ -13,6 +13,7 @@ export { default as ArticleBodyFooter } from "./article/ArticleBodyFooter";
 export { default as ArticleComment } from "./article/ArticleComment";
 export { default as CommentWrite } from "./article/CommentWrite";
 export { default as ArticleFooter } from "./article/ArticleFooter";
+export { default as ArticleCoverImage } from "./article/ArticleCoverImage";
 export { default as WriterInfo } from "./article/WriterInfo";
 export { default as ArticleListRecommended } from "./article/ArticleListRecommended";
 export { default as Banner } from "./article/Banner";
