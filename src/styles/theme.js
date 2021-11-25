@@ -27,7 +27,7 @@ const colors = {
 const deviceSizes = {
   tablet: "768px",
   mobile: "360px",
-  labtop: "1025px",
+  labtop: "1024px",
 };
 
 const device = {
