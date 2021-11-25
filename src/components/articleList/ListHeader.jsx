@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import ArrowIcon from "../../assets/icons/arrow.svg";
 
 const ListHeader = () => {
@@ -24,6 +24,7 @@ const ListHeader = () => {
     "아이패드",
   ]);
   const [added, setAdded] = useState(false);
+  const [folded, setFolded] = useState("더보기");
 
   const addTags = () => {
     setTagData((currentArray) => [
@@ -58,6 +59,7 @@ const ListHeader = () => {
       "VR",
     ]);
     setAdded(true);
+    setFolded("접기");
   };
 
   const removeTags = () => {
@@ -67,19 +69,20 @@ const ListHeader = () => {
       return newArray;
     });
     setAdded(false);
+    setFolded("더보기");
   };
   return (
     <StyledWrapper>
       <div>
-        <div className="tags">
+        <TagStyled>
           {tagData.map((tags, idx) => (
             <button key={`tag-${idx}`}>{tags}</button>
           ))}
-        </div>
-        <div onClick={added ? removeTags : addTags} className="more">
-          <span>더보기</span>
+        </TagStyled>
+        <MoreStyled onClick={added ? removeTags : addTags} added={added}>
+          <div>{folded}</div>
           <img src={ArrowIcon} alt="arrow" />
-        </div>
+        </MoreStyled>
       </div>
     </StyledWrapper>
   );
@@ -89,7 +92,7 @@ export default ListHeader;
 
 const StyledWrapper = styled.div`
   width: 100%;
-  min-height: 7rem;
+  height: 100%;
   background-color: ${({ theme }) => theme.colors.white};
   display: flex;
   justify-content: center;
@@ -99,38 +102,58 @@ const StyledWrapper = styled.div`
   & > div {
     width: 120rem;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    min-height: 2.6rem;
   }
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    width: 108.5rem;
-    height: 100%;
-  }
+`;
 
-  .tags button {
+const TagStyled = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 108.5rem;
+  padding-bottom: 1.6rem;
+  /* min-height: 2.6rem; */
+
+  & > button {
     font-size: ${({ theme }) => theme.fontSizes.caption};
     font-weight: 300;
     color: ${({ theme }) => theme.colors.gray600};
     border-radius: 1.4rem;
     line-height: 1;
     padding: 0.4rem 1rem;
-    margin: 0.5rem 0.8rem;
+    margin: 0 0.8rem;
+    margin-bottom: 1rem;
     margin-left: 0;
     letter-spacing: -0.04em;
     align-items: center;
+    height: 2.6rem;
   }
+`;
 
-  .more {
+const MoreStyled = styled.div`
+  /* width: 4.3rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.6rem;
+  line-height: 1.8;
+  padding-bottom: 0.6rem;
+  color: ${({ theme }) => theme.colors.gray600};
+
+  & > div {
     display: flex;
-    justify-content: center;
-    line-height: 1.8;
-    color: ${({ theme }) => theme.colors.gray600};
+    align-items: center;
+    height: 100%;
   }
 
-  .more img {
+  & > img {
+    transform: rotate(${({ added }) => added && "180deg"}); // rotate시키는 첫 번쨰 방법
+    ${({ added }) =>
+      added &&
+      css`
+        transform: rotate(180deg);
+      `}; // rotate시키는 두 번째 방법
     margin-left: 0.3rem;
+    width: 1rem;
+    height: 1.1rem;
   }
 `;
