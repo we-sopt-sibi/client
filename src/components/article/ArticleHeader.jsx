@@ -51,6 +51,11 @@ const StyledHeaderWrapper = styled.header`
     letter-spacing: -0.04em;
   }
 
+  @media ${({ theme }) => theme.device.labtop} {
+    width: calc(100% - 12rem);
+    border: 1px solid blue;
+  }
+
   @media ${({ theme }) => theme.device.tablet} {
     width: calc(100% - 3.4rem);
   }

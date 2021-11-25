@@ -27,11 +27,13 @@ const colors = {
 const deviceSizes = {
   tablet: "768px",
   mobile: "360px",
+  labtop: "1024px",
 };
 
 const device = {
   mobile: `only screen and (max-width: ${deviceSizes.mobile})`,
   tablet: `only screen and (max-width: ${deviceSizes.tablet})`,
+  labtop: `only screen and (max-width: ${deviceSizes.labtop})`,
 };
 
 const theme = {

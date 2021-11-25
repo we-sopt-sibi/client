@@ -50,6 +50,10 @@ const StyledBodyFooterWrapper = styled.footer`
   margin: 0 auto;
   margin-bottom: 3rem;
 
+  @media ${({ theme }) => theme.device.labtop} {
+    width: calc(100% - 12rem);
+  }
+
   @media ${({ theme }) => theme.device.tablet} {
     width: calc(100% - 3.4rem);
   }
@@ -83,6 +87,7 @@ const StyledTags = styled.ul`
 
   @media ${({ theme }) => theme.device.mobile} {
     margin-bottom: 2.4rem;
+
     & > li {
       padding: 0.8rem 1rem;
       & > button {

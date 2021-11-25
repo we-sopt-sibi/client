@@ -38,6 +38,10 @@ const StyledInputWrapper = styled.div`
     margin-right: 1.4rem;
   }
 
+  @media ${({ theme }) => theme.device.labtop} {
+    width: calc(100% - 12rem);
+  }
+
   @media ${({ theme }) => theme.device.tablet} {
     width: calc(100% - 3.4rem);
   }

@@ -65,6 +65,10 @@ const StyledBodyWrapper = styled.article`
     margin-bottom: 0.6rem;
   }
 
+  @media ${({ theme }) => theme.device.labtop} {
+    width: calc(100% - 12rem);
+  }
+
   @media ${({ theme }) => theme.device.tablet} {
     width: calc(100% - 3.4rem);
   }
@@ -72,6 +76,7 @@ const StyledBodyWrapper = styled.article`
   @media ${({ theme }) => theme.device.mobile} {
     margin-bottom: 10.6rem;
     width: calc(100% - 2rem);
+
     & > svg:last-child {
       padding-bottom: 0;
     }
