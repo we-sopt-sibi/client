@@ -38,6 +38,8 @@ const StyledBodyWrapper = styled.article`
   height: 100%;
   margin-bottom: 10.6rem;
 
+  border: 1px solid blueviolet;
+
   & > svg {
     width: 100%;
     height: 100%;
@@ -65,13 +67,21 @@ const StyledBodyWrapper = styled.article`
     margin-bottom: 0.6rem;
   }
 
+  @media ${({ theme }) => theme.device.labtop} {
+    width: calc(100% - 12rem);
+    border: 1px solid blue;
+  }
+
   @media ${({ theme }) => theme.device.tablet} {
     width: calc(100% - 3.4rem);
+    border: 1px solid tomato;
   }
 
   @media ${({ theme }) => theme.device.mobile} {
     margin-bottom: 10.6rem;
     width: calc(100% - 2rem);
+    border: 1px solid yellow;
+
     & > svg:last-child {
       padding-bottom: 0;
     }
