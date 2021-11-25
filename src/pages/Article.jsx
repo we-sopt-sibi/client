@@ -8,18 +8,16 @@ import {
 } from "../components";
 import styled from "styled-components";
 
-const Article = () => {
+const Article = ({ setShowDrawer }) => {
   return (
-    <>
-      <StyledArticleWrapper>
-        <ArticleHeader />
-        <ArticleCoverImage />
-        <ArticleBody />
-        <ArticleBodyFooter />
-        <ArticleComment />
-        <ArticleFooter />
-      </StyledArticleWrapper>
-    </>
+    <StyledArticleWrapper onClick={() => setShowDrawer(false)}>
+      <ArticleHeader />
+      <ArticleCoverImage />
+      <ArticleBody />
+      <ArticleBodyFooter />
+      <ArticleComment />
+      <ArticleFooter />
+    </StyledArticleWrapper>
   );
 };
 

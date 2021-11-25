@@ -1,6 +1,9 @@
+import { useLocation } from "react-router";
 import styled from "styled-components";
 
 const Footer = () => {
+  const { pathname } = useLocation();
+  if (pathname === "/list") return null;
   return <StyledWrapper />;
 };
 

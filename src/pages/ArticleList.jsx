@@ -4,7 +4,7 @@ import ListItem from "../components/articleList/ListItem";
 import WriterList from "../components/articleList/WriterList";
 import ListFooter from "../components/articleList/ListFooter";
 
-const ArticleList = () => {
+const ArticleList = ({ setShowDrawer }) => {
   const tempData = [
     {
       title: "웹 디자인을 위한 컬러 선택",
@@ -107,7 +107,7 @@ const ArticleList = () => {
     },
   ];
   return (
-    <StyledWrapper>
+    <StyledWrapper onClick={() => setShowDrawer(false)}>
       <ListHeader />
       <div className="body">
         <section>
