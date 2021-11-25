@@ -71,15 +71,15 @@ const ListHeader = () => {
   return (
     <StyledWrapper>
       <div>
-        <div className="tags">
+        <TagStyled>
           {tagData.map((tags, idx) => (
             <button key={`tag-${idx}`}>{tags}</button>
           ))}
-        </div>
-        <div onClick={added ? removeTags : addTags} className="more">
+        </TagStyled>
+        <MoreStyled onClick={added ? removeTags : addTags} className="more">
           <span>더보기</span>
           <img src={ArrowIcon} alt="arrow" />
-        </div>
+        </MoreStyled>
       </div>
     </StyledWrapper>
   );
@@ -95,6 +95,7 @@ const StyledWrapper = styled.div`
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid ${({ theme }) => theme.colors.gray300};
+  position: relative;
 
   & > div {
     width: 120rem;
@@ -103,14 +104,16 @@ const StyledWrapper = styled.div`
     justify-content: space-between;
     min-height: 2.6rem;
   }
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    width: 108.5rem;
-    height: 100%;
-  }
+`;
 
-  .tags button {
+const TagStyled = styled.div`
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  width: 108.5rem;
+  height: 100%;
+
+  & > button {
     font-size: ${({ theme }) => theme.fontSizes.caption};
     font-weight: 300;
     color: ${({ theme }) => theme.colors.gray600};
@@ -122,15 +125,17 @@ const StyledWrapper = styled.div`
     letter-spacing: -0.04em;
     align-items: center;
   }
+`;
 
-  .more {
-    display: flex;
-    justify-content: center;
-    line-height: 1.8;
-    color: ${({ theme }) => theme.colors.gray600};
-  }
+const MoreStyled = styled.div`
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  line-height: 1.8;
+  color: ${({ theme }) => theme.colors.gray600};
 
-  .more img {
+  & > img {
     margin-left: 0.3rem;
   }
 `;
