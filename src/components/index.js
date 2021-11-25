@@ -18,4 +18,3 @@ export { default as WriterInfo } from "./article/WriterInfo";
 export { default as ArticleListRecommended } from "./article/ArticleListRecommended";
 export { default as Banner } from "./article/Banner";
 export { default as DrawerMenu } from "./common/drawer/DrawerMenu";
-export { default as ArticleCoverImage } from "./article/ArticleCoverImage";
