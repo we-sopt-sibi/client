@@ -96,20 +96,20 @@ const StyledWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
   display: flex;
   justify-content: center;
-  padding: 0 2rem;
+  padding: 0 3.4rem;
   align-items: center;
   border-bottom: 1px solid ${({ theme }) => theme.colors.gray300};
 
   & > div {
+    width: 120rem;
+    display: flex;
+    justify-content: space-between;
     @media ${({ theme }) => theme.device.tablet} {
       width: 70rem;
     }
     @media ${({ theme }) => theme.device.mobile} {
       width: 32rem;
     }
-    width: 120rem;
-    display: flex;
-    justify-content: space-between;
   }
 `;
 
@@ -117,14 +117,15 @@ const TagStyled = styled.div`
   display: flex;
   flex-wrap: wrap;
   @media ${({ theme }) => theme.device.tablet} {
-    width: 108.5rem;
+    width: 62rem;
   }
   @media ${({ theme }) => theme.device.mobile} {
+    padding-right: 0.9rem;
     width: 27.5rem;
   }
   width: 100%;
   padding-bottom: 1.6rem;
-  /* min-height: 2.6rem; */
+  margin-right: 3.8rem;
 
   & > button {
     font-size: ${({ theme }) => theme.fontSizes.caption};
