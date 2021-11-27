@@ -96,10 +96,17 @@ const StyledWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
   display: flex;
   justify-content: center;
+  padding: 0 2rem;
   align-items: center;
   border-bottom: 1px solid ${({ theme }) => theme.colors.gray300};
 
   & > div {
+    @media ${({ theme }) => theme.device.tablet} {
+      width: 70rem;
+    }
+    @media ${({ theme }) => theme.device.mobile} {
+      width: 32rem;
+    }
     width: 120rem;
     display: flex;
     justify-content: space-between;
@@ -109,7 +116,13 @@ const StyledWrapper = styled.div`
 const TagStyled = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 108.5rem;
+  @media ${({ theme }) => theme.device.tablet} {
+    width: 108.5rem;
+  }
+  @media ${({ theme }) => theme.device.mobile} {
+    width: 27.5rem;
+  }
+  width: 100%;
   padding-bottom: 1.6rem;
   /* min-height: 2.6rem; */
 
@@ -142,6 +155,8 @@ const MoreStyled = styled.div`
   & > div {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 3.3rem;
     height: 100%;
   }
 

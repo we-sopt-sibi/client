@@ -40,9 +40,17 @@ const StyledWrapper = styled.div`
   padding-top: 2.7rem;
   padding-left: 3rem;
   border-bottom: 0.1rem solid ${({ theme }) => theme.colors.gray300};
+  @media ${({ theme }) => theme.device.tablet} {
+    width: 53.5rem;
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    width: 32rem;
+  }
 
   & > div:first-child {
-    width: 77.9rem;
+    max-width: 77.9rem;
+    width: 100%;
     height: 100%;
   }
 
@@ -69,7 +77,7 @@ const SubTitle = styled.div`
   line-height: 1.8;
   margin-bottom: 1.7rem;
   letter-spacing: -0.04em;
-  width: 74.9rem;
+  max-width: 74.9rem;
 `;
 
 const Caption = styled.div`
