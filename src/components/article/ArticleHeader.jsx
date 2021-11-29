@@ -53,7 +53,6 @@ const StyledHeaderWrapper = styled.header`
 
   @media ${({ theme }) => theme.device.labtop} {
     width: calc(100% - 12rem);
-    border: 1px solid blue;
   }
 
   @media ${({ theme }) => theme.device.tablet} {
