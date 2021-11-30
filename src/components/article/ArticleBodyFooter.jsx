@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import styled, { css } from "styled-components";
 import { ReactComponent as CommentIcon } from "../../assets/icons/comment.svg";
 import { ReactComponent as LikeIcon } from "../../assets/icons/like.svg";
 import { ReactComponent as LikeWhiteIcon } from "../../assets/icons/likeWhite.svg";
 
 const ArticleBodyFooter = ({ articleData }) => {
+  const navigate = useNavigate();
   const { isLike, likeNumber, commentNumber } = articleData || {};
 
   const [isLikeClicked, setIsLikeClicked] = useState(isLike);
@@ -13,11 +15,15 @@ const ArticleBodyFooter = ({ articleData }) => {
     setIsLikeClicked(!isLikeClicked);
   };
 
+  const handleTag = () => {
+    navigate("/article/list");
+  };
+
   return (
     <StyledBodyFooterWrapper>
       <StyledTags>
         <li>
-          <button>IT 트렌드</button>
+          <button onClick={handleTag}>IT 트렌드</button>
         </li>
         <li>
           <button>디자인</button>
