@@ -40,19 +40,42 @@ const StyledWrapper = styled.div`
   padding-top: 2.7rem;
   padding-left: 3rem;
   border-bottom: 0.1rem solid ${({ theme }) => theme.colors.gray300};
+  @media ${({ theme }) => theme.device.tablet} {
+    width: 53.5rem;
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    width: 32rem;
+  }
 
   & > div:first-child {
-    width: 77.9rem;
+    width: 100%;
     height: 100%;
   }
 
   & > div:last-child {
     display: flex;
     justify-content: center;
+    align-items: flex-end;
+    margin-left: 2.3rem;
+    padding-bottom: 1.7rem;
     padding-right: 3rem;
+    @media ${({ theme }) => theme.device.tablet} {
+      padding-right: 0.9rem;
+      margin-left: 1.9rem;
+      padding-bottom: 2.2rem;
+    }
   }
 
   & > div:last-child img {
+    @media ${({ theme }) => theme.device.tablet} {
+      width: 9.5rem;
+      height: 9.5rem;
+    }
+    @media ${({ theme }) => theme.device.mobile} {
+      width: 7.4rem;
+      height: 7.4rem;
+    }
     width: 12.8rem;
     height: 12.8rem;
   }
@@ -60,25 +83,51 @@ const StyledWrapper = styled.div`
 
 const Title = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.subTitle1};
+
+  @media ${({ theme }) => theme.device.tablet} {
+    font-size: 1.6rem;
+  }
+  @media ${({ theme }) => theme.device.mobile} {
+    font-size: 1.4rem;
+  }
   margin-bottom: 0.5rem;
   line-height: 1.8;
 `;
 
 const SubTitle = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.paragraph2};
+
+  @media ${({ theme }) => theme.device.tablet} {
+    font-size: 1.2rem;
+  }
+  @media ${({ theme }) => theme.device.mobile} {
+    font-size: 1rem;
+  }
   line-height: 1.8;
   margin-bottom: 1.7rem;
   letter-spacing: -0.04em;
-  width: 74.9rem;
+  max-width: 74.9rem;
 `;
 
 const Caption = styled.div`
   display: flex;
   color: ${({ theme }) => theme.colors.gray600};
-  font-size: ${({ theme }) => theme.fontSizes.caption};
+
+  & > span {
+    font-size: ${({ theme }) => theme.fontSizes.caption};
+    @media ${({ theme }) => theme.device.tablet} {
+      font-size: 1rem;
+    }
+    @media ${({ theme }) => theme.device.mobile} {
+      font-size: 0.1rem;
+    }
+  }
 
   & > img {
     margin-left: 0.9rem;
     margin-right: 0.6rem;
+    @media ${({ theme }) => theme.device.mobile} {
+      margin: 0;
+    }
   }
 `;

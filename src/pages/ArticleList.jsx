@@ -109,7 +109,7 @@ const ArticleList = ({ setShowDrawer }) => {
   return (
     <StyledWrapper onClick={() => setShowDrawer(false)}>
       <ListHeader />
-      <div className="body">
+      <ListMain>
         <section>
           <article>
             {tempData.map((datum, idx) => (
@@ -121,7 +121,7 @@ const ArticleList = ({ setShowDrawer }) => {
             <WriterList />
           </aside>
         </section>
-      </div>
+      </ListMain>
     </StyledWrapper>
   );
 };
@@ -130,29 +130,42 @@ export default ArticleList;
 
 const StyledWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.gray100};
+`;
 
-  .body {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+const ListMain = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3.4rem;
 
-  .body section {
+  & > section {
     margin-top: 3.6rem;
     display: flex;
-    justify-content: space-between;
-    width: 120rem;
+    justify-content: center;
+    width: 100%;
     height: 100%;
+    @media ${({ theme }) => theme.device.tablet} {
+      width: 96rem;
+    }
+
+    @media ${({ theme }) => theme.device.mobile} {
+      width: 32rem;
+    }
   }
 
-  .body section article {
-    width: 96rem;
-    height: 100%;
+  & > section article {
+    margin-right: 2rem;
   }
 
-  .body section aside {
+  & > section aside {
+    @media ${({ theme }) => theme.device.mobile} {
+      display: none;
+    }
+    @media ${({ theme }) => theme.device.tablet} {
+      width: 15.6rem;
+    }
     width: 22rem;
     height: 35.7rem;
   }

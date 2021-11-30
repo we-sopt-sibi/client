@@ -31,6 +31,10 @@ const StyledWrapper = styled.div`
   display: flex;
 
   & > img {
+    @media ${({ theme }) => theme.device.tablet} {
+      width: 3rem;
+      height: 3rem;
+    }
     width: 3.6rem;
     height: 3.6rem;
   }
@@ -44,11 +48,17 @@ const StyledWrapper = styled.div`
     display: flex;
     align-items: center;
     font-size: ${({ theme }) => theme.fontSizes.paragraph1};
+    @media ${({ theme }) => theme.device.tablet} {
+      font-size: 1.2rem;
+    }
   }
   .writer_Info {
     display: flex;
     justify-content: center;
     font-size: ${({ theme }) => theme.fontSizes.caption};
+    @media ${({ theme }) => theme.device.tablet} {
+      font-size: 1rem;
+    }
     color: ${({ theme }) => theme.colors.gray500};
   }
   .writer_Info > img {
