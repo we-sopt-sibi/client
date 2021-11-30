@@ -29,12 +29,12 @@ const Article = ({ setShowDrawer }) => {
 
   return (
     <StyledArticleWrapper onClick={() => setShowDrawer(false)}>
-      <ArticleHeader articleData={articleData} />
+      <ArticleHeader articleData={articleData.data} />
       <ArticleCoverImage />
-      <ArticleBody />
-      <ArticleBodyFooter />
-      <ArticleComment />
-      <ArticleFooter />
+      <ArticleBody articleData={articleData.data} />
+      <ArticleBodyFooter articleData={articleData.data} />
+      <ArticleComment articleData={articleData.data} />
+      <ArticleFooter articleData={articleData} />
     </StyledArticleWrapper>
   );
 };

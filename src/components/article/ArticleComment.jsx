@@ -14,23 +14,24 @@ const ArticleComment = ({ articleData }) => {
           <span>{commentNumber}</span>
         </StyledCommentHeader>
         <StyledCommentList>
-          {comments.map((comment) => (
-            <li key={comment.commentId}>
-              <StyledComment>
-                <div>
-                  <img src={writerProfile} alt="" />
-                </div>
-                <div>
+          {comments &&
+            comments.map((comment) => (
+              <li key={comment.commentId}>
+                <StyledComment>
                   <div>
-                    <span>{comment.user[0].name}</span>
-                    <Dot />
-                    <span>{comment.createdAt.substring(0, 10)}</span>
+                    <img src={writerProfile} alt="" />
                   </div>
-                  <div>{comment.content}</div>
-                </div>
-              </StyledComment>
-            </li>
-          ))}
+                  <div>
+                    <div>
+                      <span>{comment.user[0].name}</span>
+                      <Dot />
+                      <span>{comment.createdAt.substring(0, 10)}</span>
+                    </div>
+                    <div>{comment.content}</div>
+                  </div>
+                </StyledComment>
+              </li>
+            ))}
         </StyledCommentList>
       </StyledCommentWrapper>
       <CommentWrite />
