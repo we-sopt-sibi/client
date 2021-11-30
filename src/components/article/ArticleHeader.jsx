@@ -1,19 +1,20 @@
 import styled from "styled-components";
-import { ReactComponent as ArticleWriter } from "../../assets/images/articleWriter.svg";
 import { ReactComponent as Dot } from "../../assets/icons/dot.svg";
 
-const ArticleHeader = () => {
+const ArticleHeader = ({ articleData }) => {
+  const { title, subTitle, writer, thumbnail, createdAt } = articleData || {};
+
   return (
     <>
       <StyledHeaderWrapper>
-        <h1>웹 디자인을 위한 컬러 선택</h1>
-        <h2>실용적인 UI 컬러 적용 가이드</h2>
+        <h1> {title}</h1>
+        <h2>{subTitle}</h2>
         <StyledProfile>
-          <ArticleWriter />
+          <img src={thumbnail} alt="thumbnail" />
           <div>
-            <span>by</span> <span>이지현</span>
+            <span>by</span> <span>{writer}</span>
             <Dot />
-            <span>Aug 19,2020</span>
+            <span>{createdAt}</span>
           </div>
         </StyledProfile>
       </StyledHeaderWrapper>
@@ -80,10 +81,11 @@ const StyledProfile = styled.div`
   margin-top: 4.2rem;
   position: relative;
 
-  & > svg {
+  & > img {
     height: 2.8rem;
     width: 2.8rem;
     margin-right: 0.6rem;
+    border-radius: 50%;
   }
 
   div {
