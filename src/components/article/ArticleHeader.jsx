@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { ReactComponent as Dot } from "../../assets/icons/dot.svg";
 
 const ArticleHeader = ({ articleData }) => {
-  const { title, subTitle, writer, thumbnail, createdAt } = articleData.data;
+  const { title, subTitle, writer, thumbnail, createdAt } = articleData || {};
 
   return (
     <>
