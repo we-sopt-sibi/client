@@ -3,30 +3,34 @@ import { writerProfile } from "../../assets/images";
 import { ReactComponent as Dot } from "../../assets/icons/dot.svg";
 import { CommentWrite } from "../../components";
 
-const ArticleComment = () => {
+const ArticleComment = ({ articleData }) => {
+  const { commentNumber, comments } = articleData || {};
+
   return (
     <>
       <StyledCommentWrapper>
         <StyledCommentHeader>
           <span>댓글</span>
-          <span>1</span>
+          <span>{commentNumber}</span>
         </StyledCommentHeader>
         <StyledCommentList>
-          <li>
-            <StyledComment>
-              <div>
-                <img src={writerProfile} alt="" />
-              </div>
-              <div>
+          {comments.map((comment) => (
+            <li key={comment.commentId}>
+              <StyledComment>
                 <div>
-                  <span>은별</span>
-                  <Dot />
-                  <span>May 01. 2021</span>
+                  <img src={writerProfile} alt="" />
                 </div>
-                <div>좋은 정보 감사합니다.</div>
-              </div>
-            </StyledComment>
-          </li>
+                <div>
+                  <div>
+                    <span>{comment.user[0].name}</span>
+                    <Dot />
+                    <span>{comment.createdAt.substring(0, 10)}</span>
+                  </div>
+                  <div>{comment.content}</div>
+                </div>
+              </StyledComment>
+            </li>
+          ))}
         </StyledCommentList>
       </StyledCommentWrapper>
       <CommentWrite />

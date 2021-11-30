@@ -6,7 +6,6 @@ import { ReactComponent as LikeWhiteIcon } from "../../assets/icons/likeWhite.sv
 
 const ArticleBodyFooter = ({ articleData }) => {
   const { isLike, likeNumber, commentNumber } = articleData || {};
-  console.log(isLike, likeNumber, commentNumber);
 
   const [isLikeClicked, setIsLikeClicked] = useState(isLike);
 
