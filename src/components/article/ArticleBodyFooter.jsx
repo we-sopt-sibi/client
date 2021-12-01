@@ -16,7 +16,7 @@ const ArticleBodyFooter = ({ articleData }) => {
   };
 
   const handleTag = () => {
-    navigate("/article/list");
+    navigate("/list");
   };
 
   return (
