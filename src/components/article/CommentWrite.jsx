@@ -76,6 +76,10 @@ const StyledInput = styled.div`
       border: 0;
     }
 
+    & > textarea:focus {
+      outline: 0;
+    }
+
     & > textarea::placeholder {
       font-size: ${({ theme }) => theme.fontSizes.paragraph2};
       font-weight: 300;
