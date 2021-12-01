@@ -2,20 +2,24 @@ import styled from "styled-components";
 import { writerProfile } from "../../assets/images";
 import { ReactComponent as EmojiIcon } from "../../assets/icons/emoji.svg";
 
-const CommentWrite = () => {
+const CommentWrite = ({ onCommentChange, createComment }) => {
+  const handleSubmit = async () => {
+    await createComment();
+  };
+
   return (
     <StyledInputWrapper>
       <img src={writerProfile} alt="" />
       <StyledInput>
         <textarea
-          name=""
-          id=""
+          name="comment"
           cols="30"
           rows="10"
+          onChange={(e) => onCommentChange("content", e.target.value)}
           placeholder="공감과 응원의 댓글은 작가에게 큰 힘이 됩니다. "></textarea>
         <div>
           <EmojiIcon />
-          <button>확인</button>
+          <button onClick={handleSubmit}>확인</button>
         </div>
       </StyledInput>
     </StyledInputWrapper>

@@ -2,9 +2,37 @@ import styled from "styled-components";
 import { writerProfile } from "../../assets/images";
 import { ReactComponent as Dot } from "../../assets/icons/dot.svg";
 import { CommentWrite } from "../../components";
+import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
+import { client } from "../../libs/api";
 
 const ArticleComment = ({ articleData }) => {
-  const { commentNumber, comments } = articleData || {};
+  const { id, commentNumber, comments } = articleData || {};
+
+  const [commentData, setCommentData] = useState({
+    commentId: `${uuidv4()}`,
+    articleId: id,
+    userId: 1,
+    content: "",
+    createdAt: "",
+    updatedAt: "",
+    user: [
+      {
+        id: 1,
+        name: "이지현",
+      },
+    ],
+  });
+
+  const createComment = async () => {
+    await client.post("api/comment", commentData);
+  };
+
+  const handleCommentChange = (key, value) => {
+    const tempArticleData = { ...commentData };
+    tempArticleData[key] = value;
+    setCommentData(tempArticleData);
+  };
 
   return (
     <>
@@ -34,7 +62,7 @@ const ArticleComment = ({ articleData }) => {
             ))}
         </StyledCommentList>
       </StyledCommentWrapper>
-      <CommentWrite />
+      <CommentWrite onCommentChange={handleCommentChange} createComment={createComment} />
     </>
   );
 };
