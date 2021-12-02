@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import styled, { css } from "styled-components";
 import { ReactComponent as CommentIcon } from "../../assets/icons/comment.svg";
@@ -7,9 +7,20 @@ import { ReactComponent as LikeWhiteIcon } from "../../assets/icons/likeWhite.sv
 
 const ArticleBodyFooter = ({ articleData }) => {
   const navigate = useNavigate();
-  const { isLike, likeNumber, commentNumber } = articleData || {};
+  const { isLike, likeNumber, commentNumber } = articleData || { isLike: false, likeNumber: 0, commentNumber: 0 };
 
-  const [isLikeClicked, setIsLikeClicked] = useState(isLike);
+  const [likeCount, setLikeCount] = useState(likeNumber);
+  const [isLikeClicked, setIsLikeClicked] = useState(0);
+
+  useEffect(() => {
+    setIsLikeClicked(isLike);
+    setLikeCount(likeNumber);
+  }, [likeNumber]);
+
+  useEffect(() => {
+    if (isLikeClicked) setLikeCount(likeCount + 1);
+    else setLikeCount(likeCount - 1);
+  }, [isLikeClicked]);
 
   const handleLikeClick = () => {
     setIsLikeClicked(!isLikeClicked);
@@ -36,7 +47,7 @@ const ArticleBodyFooter = ({ articleData }) => {
         <button onClick={handleLikeClick}>
           {isLikeClicked ? <LikeWhiteIcon /> : <LikeIcon />}
           <span>좋아요</span>
-          <span>{likeNumber}</span>
+          <span>{likeCount}</span>
         </button>
         <button>
           <CommentIcon />

@@ -17,8 +17,7 @@ const Article = ({ setShowDrawer }) => {
   const getArticleData = async () => {
     try {
       const { data } = await client.get("api/article/1");
-      console.log(`data`, data);
-      setArticleData(data.data);
+      setArticleData(data);
     } catch (error) {
       console.log(error);
     }
