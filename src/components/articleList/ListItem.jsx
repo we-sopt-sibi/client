@@ -1,11 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router";
 import styled from "styled-components";
 import CenterDotIcon from "../../assets/icons/centerDot.svg";
 
 const ListItem = ({ datum }) => {
+  const navigate = useNavigate();
+
+  const handleArticle = () => {
+    navigate("/");
+  };
   return (
     <StyledWrapper>
-      <div>
+      <div onClick={handleArticle}>
         <Title>{datum.title}</Title>
         <SubTitle>{datum.thumbnailContent}</SubTitle>
         <Caption>
@@ -45,6 +51,9 @@ const StyledWrapper = styled.div`
 
   @media ${({ theme }) => theme.device.mobile} {
     width: 32rem;
+  }
+  & > div:hover {
+    cursor: pointer;
   }
 
   & > div:first-child {
