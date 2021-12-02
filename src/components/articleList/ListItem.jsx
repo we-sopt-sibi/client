@@ -1,28 +1,27 @@
 import React from "react";
 import styled from "styled-components";
 import CenterDotIcon from "../../assets/icons/centerDot.svg";
-import listThumnail from "../../assets/images/listThumnail.png";
 
 const ListItem = ({ datum }) => {
   return (
     <StyledWrapper>
       <div>
         <Title>{datum.title}</Title>
-        <SubTitle>{datum.subTitle}</SubTitle>
+        <SubTitle>{datum.thumbnailContent}</SubTitle>
         <Caption>
-          <span>좋아요{datum.like}</span>
+          <span>좋아요{datum.likeNumber}</span>
           <img src={CenterDotIcon} alt="dot" />
-          <span>댓글{datum.comment}</span>
+          <span>댓글{datum.commentNumber}</span>
           <img src={CenterDotIcon} alt="dot" />
-          <span>공유{datum.share}</span>
+          <span>공유{datum.shareNumber}</span>
           <img src={CenterDotIcon} alt="dot" />
-          <span>{datum.time}시간 전</span>
+          <span>{datum.hour}시간 전</span>
           <img src={CenterDotIcon} alt="dot" />
           <span>by {datum.writer}</span>
         </Caption>
       </div>
       <div>
-        <img src={listThumnail} alt="listThumnail" />
+        <img src={datum.thumbnail} alt="thumbnail" />
       </div>
     </StyledWrapper>
   );

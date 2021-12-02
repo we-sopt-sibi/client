@@ -3,117 +3,36 @@ import styled from "styled-components";
 import ListItem from "../components/articleList/ListItem";
 import WriterList from "../components/articleList/WriterList";
 import ListFooter from "../components/articleList/ListFooter";
+import { client } from "../libs/api";
+import { useEffect, useState } from "react";
 
 const ArticleList = ({ setShowDrawer }) => {
-  const tempData = [
-    {
-      title: "웹 디자인을 위한 컬러 선택",
-      subTitle:
-        "색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 브랜드 인지와 색상도 분명히 연관이 있으며 당신이 선택한",
-      etx: "좋아요",
-      like: 199,
-      comment: 1,
-      share: 384,
-      time: 2,
-      writer: "이지현",
-    },
-    {
-      title: "웹 디자인을 위한 컬러 선택",
-      subTitle:
-        "색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 브랜드 인지와 색상도 분명히 연관이 있으며 당신이 선택한",
-      etx: "좋아요",
-      like: 199,
-      comment: 1,
-      share: 384,
-      time: 2,
-      writer: "이지현",
-    },
-    {
-      title: "웹 디자인을 위한 컬러 선택",
-      subTitle:
-        "색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 브랜드 인지와 색상도 분명히 연관이 있으며 당신이 선택한",
-      etx: "좋아요",
-      like: 199,
-      comment: 1,
-      share: 384,
-      time: 2,
-      writer: "이지현",
-    },
-    {
-      title: "웹 디자인을 위한 컬러 선택",
-      subTitle:
-        "색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 브랜드 인지와 색상도 분명히 연관이 있으며 당신이 선택한",
-      etx: "좋아요",
-      like: 199,
-      comment: 1,
-      share: 384,
-      time: 2,
-      writer: "이지현",
-    },
-    {
-      title: "웹 디자인을 위한 컬러 선택",
-      subTitle:
-        "색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 브랜드 인지와 색상도 분명히 연관이 있으며 당신이 선택한",
-      etx: "좋아요",
-      like: 199,
-      comment: 1,
-      share: 384,
-      time: 2,
-      writer: "이지현",
-    },
-    {
-      title: "웹 디자인을 위한 컬러 선택",
-      subTitle:
-        "색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 브랜드 인지와 색상도 분명히 연관이 있으며 당신이 선택한",
-      etx: "좋아요",
-      like: 199,
-      comment: 1,
-      share: 384,
-      time: 2,
-      writer: "이지현",
-    },
-    {
-      title: "웹 디자인을 위한 컬러 선택",
-      subTitle:
-        "색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 브랜드 인지와 색상도 분명히 연관이 있으며 당신이 선택한",
-      etx: "좋아요",
-      like: 199,
-      comment: 1,
-      share: 384,
-      time: 2,
-      writer: "이지현",
-    },
-    {
-      title: "웹 디자인을 위한 컬러 선택",
-      subTitle:
-        "색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 브랜드 인지와 색상도 분명히 연관이 있으며 당신이 선택한",
-      etx: "좋아요",
-      like: 199,
-      comment: 1,
-      share: 384,
-      time: 2,
-      writer: "이지현",
-    },
-    {
-      title: "웹 디자인을 위한 컬러 선택",
-      subTitle:
-        "색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 색상은 좋은 웹디자인을 만들기 위해 필수적인 것이며, 매우 신중히 고려되어야 한다. 브랜드 인지와 색상도 분명히 연관이 있으며 당신이 선택한",
-      etx: "좋아요",
-      like: 199,
-      comment: 1,
-      share: 384,
-      time: 2,
-      writer: "이지현",
-    },
-  ];
+  const [articleListData, setArticleListData] = useState([]);
+
+  const getArticleListData = async () => {
+    try {
+      const { data } = await client.get("api/article/list");
+      console.log(`data`, data);
+      console.log(`data.data`, data.data);
+      setArticleListData(data.data);
+      console.log(articleListData);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getArticleListData();
+  }, []);
+
   return (
     <StyledWrapper onClick={() => setShowDrawer(false)}>
       <ListHeader />
       <ListMain>
         <section>
           <article>
-            {tempData.map((datum, idx) => (
-              <ListItem key={`data-${idx}`} datum={datum} />
+            {articleListData.map((datum) => (
+              <ListItem key={datum.id} datum={datum} />
             ))}
             <ListFooter />
           </article>
