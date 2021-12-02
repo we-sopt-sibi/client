@@ -6,7 +6,7 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { client } from "../../libs/api";
 
-const ArticleComment = ({ articleData }) => {
+const ArticleComment = ({ articleData, setIsCommentAdded }) => {
   const { id, commentNumber, comments } = articleData || {};
 
   const [commentData, setCommentData] = useState({
@@ -25,7 +25,14 @@ const ArticleComment = ({ articleData }) => {
   });
 
   const createComment = async () => {
-    await client.post("api/comment", commentData);
+    if (commentData.content !== "") {
+      try {
+        await client.post("api/comment", commentData);
+        setIsCommentAdded(true);
+      } catch (error) {
+        console.log(error.message);
+      }
+    } else alert("댓글창이 비어있습니다.");
   };
 
   const handleCommentChange = (key, value) => {
