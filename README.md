@@ -2,7 +2,7 @@
 
 |                            김규민                            |                            김소령                            |                            김연이                            |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| <img src="https://user-images.githubusercontent.com/55784772/124715910-74793900-df3e-11eb-9745-2601765cd046.png" alt="profile" width="100" height="100"> | <img src="https://user-images.githubusercontent.com/55784772/124715910-74793900-df3e-11eb-9745-2601765cd046.png" alt="profile" width="100" height="100"> | <img src="https://avatars.githubusercontent.com/u/73516688?v=4" alt="profile" width="100" height="100"> |
+| <img src="https://avatars.githubusercontent.com/u/87220517?v=4" alt="profile" width="100" height="100"> | <img src="https://user-images.githubusercontent.com/55784772/124715910-74793900-df3e-11eb-9745-2601765cd046.png" alt="profile" width="100" height="100"> | <img src="https://avatars.githubusercontent.com/u/73516688?v=4" alt="profile" width="100" height="100"> |
 |       [q-bit-junior](https://github.com/q-bit-junior)        |          [soryeongk](https://github.com/soryeongk)           |          [younyikim](https://github.com/younyikim)           |
 |                      안녕 나는 규민이얌                      |                       안녕 나는 령이얌                       |                       안녕 나는 연이얌                       |
 
