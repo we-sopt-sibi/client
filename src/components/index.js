@@ -1,6 +1,7 @@
 export { default as Header } from "./common/Header";
 export { default as Footer } from "./common/Footer";
 export { default as NavIconWrapper } from "./common/NavIconWrapper";
+export { default as IconWrapper } from "./common/IconWrapper";
 export { default as Drawer } from "./common/drawer/Drawer";
 export { default as Profile } from "./common/drawer/Profile";
 export { default as DrawerBody } from "./common/drawer/DrawerBody";

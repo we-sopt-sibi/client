@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import { useRecoilState } from "recoil";
 import styled, { css } from "styled-components";
 import { ReactComponent as CommentIcon } from "../../assets/icons/comment.svg";
 import { ReactComponent as LikeIcon } from "../../assets/icons/like.svg";
 import { ReactComponent as LikeWhiteIcon } from "../../assets/icons/likeWhite.svg";
+import { isLikeAtom } from "../../states";
 
 const ArticleBodyFooter = ({ articleData }) => {
   const navigate = useNavigate();
   const { isLike, likeNumber, commentNumber } = articleData || {};
 
   const [likeCount, setLikeCount] = useState(0);
-  const [isLikeClicked, setIsLikeClicked] = useState(0);
   const [isFirstRender, setIsFirstRender] = useState(true);
+  const [isLikeClicked, setIsLikeClicked] = useRecoilState(isLikeAtom);
 
   useEffect(() => {
     setIsLikeClicked(isLike);
@@ -38,7 +40,7 @@ const ArticleBodyFooter = ({ articleData }) => {
   };
 
   return (
-    <StyledBodyFooterWrapper>
+    <StyledBodyFooterWrapper className="scrollHere">
       <StyledTags>
         <li>
           <button onClick={handleTag}>IT 트렌드</button>

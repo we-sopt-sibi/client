@@ -24,13 +24,17 @@ const Header = ({ showDrawer, setShowDrawer }) => {
 export default Header;
 
 const StyledWrapper = styled.header`
-  position: relative;
+  position: sticky;
+  top: 0px;
+  background-color: ${({ theme }) => theme.colors.white};
   width: 100%;
   height: 8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1.9rem 2rem;
+  padding-right: 0;
+  z-index: 99;
 
   & > span {
     visibility: ${(props) => (props.pathname === "/" ? "hidden" : "visible")};

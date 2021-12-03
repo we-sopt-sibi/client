@@ -9,9 +9,11 @@ import {
 import styled from "styled-components";
 import { client } from "../libs/api";
 import { useEffect, useState } from "react";
+import { useRecoilState } from "recoil";
+import { articleAtom } from "../states";
 
 const Article = ({ setShowDrawer }) => {
-  const [articleData, setArticleData] = useState([]);
+  const [articleData, setArticleData] = useRecoilState(articleAtom);
   const [isCommentAdded, setIsCommentAdded] = useState(false);
 
   const getArticleData = async () => {

@@ -1,19 +1,22 @@
 import styled from "styled-components";
-import { ReactComponent as LikeIcon } from "../../assets/icons/like.svg";
-import { ReactComponent as CommentIcon } from "../../assets/icons/comment.svg";
-import { ReactComponent as ShareIcon } from "../../assets/icons/share.svg";
 import { ReactComponent as MoreIcon } from "../../assets/icons/navMore.svg";
 
+import { useEffect, useState } from "react";
+import { IconWrapper } from "..";
+
 const NavIconWrapper = () => {
+  const [isMoreClicked, setIsMoreClicked] = useState(false);
+
+  useEffect(() => {
+    console.log(`isMoreClicked`, isMoreClicked);
+  }, [isMoreClicked]);
+
   return (
     <StyledWrapper>
-      <LikeIcon alt="like" />
-      <span>199</span>
-      <CommentIcon alt="comment" />
-      <span>1</span>
-      <ShareIcon alt="share" />
-      <span>384</span>
-      <MoreIcon alt="more" style={{ marginLeft: "0.6rem" }} />
+      <IconWrapper isVisible={isMoreClicked} />
+      <StyledMoreIcon isClicked={isMoreClicked} onClick={() => setIsMoreClicked(!isMoreClicked)}>
+        <MoreIcon alt="more" />
+      </StyledMoreIcon>
     </StyledWrapper>
   );
 };
@@ -24,16 +27,17 @@ const StyledWrapper = styled.section`
   display: flex;
   align-items: center;
   padding: 0.3rem 0;
+  position: relative;
+`;
 
-  svg {
-    width: 2.4rem;
-    height: 2.4rem;
-
-    & + span {
-      margin-left: 0.4rem;
-      margin-right: 1rem;
-      font-size: ${({ theme }) => theme.fontSizes.paragraph2};
-      letter-spacing: -0.04em;
-    }
+const StyledMoreIcon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.4rem;
+  background-color: white;
+  @media ${({ theme }) => theme.device.mobile} {
+    transition: transform 0.5s;
+    transform: ${(props) => (props.isClicked ? "rotate(90deg)" : "")};
   }
 `;
