@@ -125,7 +125,7 @@ const StyledWrapper = styled.div`
   justify-content: center;
   padding: 0 3.4rem;
   align-items: center;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.gray300};
+  /* border-bottom: 1px solid ${({ theme }) => theme.colors.gray300}; */
 
   & > div {
     width: 120rem;

@@ -5,6 +5,7 @@ import WriterList from "../components/articleList/WriterList";
 import ListFooter from "../components/articleList/ListFooter";
 import { client } from "../libs/api";
 import { useEffect, useState } from "react";
+import { StyledCoverImage } from "../components/article/ArticleCoverImage";
 
 const ArticleList = ({ setShowDrawer }) => {
   const [articleListData, setArticleListData] = useState([]);
@@ -25,6 +26,7 @@ const ArticleList = ({ setShowDrawer }) => {
   return (
     <StyledWrapper onClick={() => setShowDrawer(false)}>
       <ListHeader />
+      <StyledCoverImage />
       <ListMain>
         <section>
           <article>

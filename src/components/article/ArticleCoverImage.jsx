@@ -6,7 +6,9 @@ const ArticleCoverImage = () => {
 
 export default ArticleCoverImage;
 
-const StyledCoverImage = styled.div`
+export const StyledCoverImage = styled.div`
+  position: sticky;
+  top: 8rem;
   width: 100%;
   height: 0.1rem;
   background: ${({ theme }) => theme.colors.gray300};

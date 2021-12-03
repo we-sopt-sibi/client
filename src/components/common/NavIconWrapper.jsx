@@ -36,6 +36,8 @@ const StyledMoreIcon = styled.div`
   justify-content: center;
   width: 4.4rem;
   background-color: white;
-  transition: transform 0.5s;
-  transform: ${(props) => (props.isClicked ? "rotate(90deg)" : "")};
+  @media ${({ theme }) => theme.device.mobile} {
+    transition: transform 0.5s;
+    transform: ${(props) => (props.isClicked ? "rotate(90deg)" : "")};
+  }
 `;

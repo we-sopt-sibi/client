@@ -48,7 +48,7 @@ const StyledContainer = styled.div`
 
   @media ${({ theme }) => theme.device.mobile} {
     position: absolute;
-    right: 3rem;
+    right: 4rem;
     ${({ isVisible }) =>
       isVisible
         ? css`

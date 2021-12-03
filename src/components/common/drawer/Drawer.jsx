@@ -39,7 +39,7 @@ export default Drawer;
 const StyledWrapper = styled.section`
   position: absolute;
   width: 26.1rem;
-  height: 108rem;
+  height: 100vh;
   left: 0;
   top: 0;
   background-color: ${({ theme }) => theme.colors.white};
