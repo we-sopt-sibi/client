@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 
 const Article = ({ setShowDrawer }) => {
   const [articleData, setArticleData] = useState([]);
+  const [isCommentAdded, setIsCommentAdded] = useState(false);
 
   const getArticleData = async () => {
     try {
@@ -24,16 +25,20 @@ const Article = ({ setShowDrawer }) => {
 
   useEffect(() => {
     getArticleData();
-  }, []);
+  }, [isCommentAdded]);
+
+  useEffect(() => {
+    setIsCommentAdded(false);
+  });
 
   return (
     <StyledArticleWrapper onClick={() => setShowDrawer(false)}>
-      <ArticleHeader articleData={articleData.data} />
+      <ArticleHeader articleData={articleData} />
       <ArticleCoverImage />
-      <ArticleBody articleData={articleData.data} />
-      <ArticleBodyFooter articleData={articleData.data} />
-      <ArticleComment articleData={articleData.data} />
-      <ArticleFooter articleData={articleData} />
+      <ArticleBody articleData={articleData} />
+      <ArticleBodyFooter articleData={articleData} />
+      <ArticleComment articleData={articleData} setIsCommentAdded={setIsCommentAdded} />
+      <ArticleFooter />
     </StyledArticleWrapper>
   );
 };
