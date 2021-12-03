@@ -11,7 +11,7 @@ const Router = () => {
       <Header showDrawer={showDrawer} setShowDrawer={setShowDrawer} />
       <Routes>
         <Route path="/" element={<Article setShowDrawer={setShowDrawer} />} />
-        <Route path="/article/:id" element={<Article setShowDrawer={setShowDrawer} />} />
+        {/* <Route path="/article/:id" element={<Article setShowDrawer={setShowDrawer} />} /> */}
         <Route path="/list/*" element={<ArticleList setShowDrawer={setShowDrawer} />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>

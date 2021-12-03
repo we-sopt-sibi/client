@@ -12,12 +12,9 @@ const ArticleList = ({ setShowDrawer }) => {
   const getArticleListData = async () => {
     try {
       const { data } = await client.get("api/article/list");
-      console.log(`data`, data);
-      console.log(`data.data`, data.data);
       setArticleListData(data.data);
-      console.log(articleListData);
     } catch (error) {
-      console.log(error);
+      console.log(error.message);
     }
   };
 
