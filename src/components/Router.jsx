@@ -5,6 +5,7 @@ import { Footer, Header } from ".";
 
 const Router = () => {
   const [showDrawer, setShowDrawer] = useState(false);
+
   return (
     <BrowserRouter>
       <Header showDrawer={showDrawer} setShowDrawer={setShowDrawer} />
