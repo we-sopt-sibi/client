@@ -16,7 +16,7 @@ const ArticleComment = ({ articleData, setIsCommentAdded }) => {
   }, []);
 
   const [commentData, setCommentData] = useState({
-    commentId: `${uniqueId}`,
+    commentId: { uniqueId },
     articleId: id,
     userId: 1,
     content: "",
