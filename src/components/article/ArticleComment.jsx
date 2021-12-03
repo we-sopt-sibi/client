@@ -2,15 +2,21 @@ import styled from "styled-components";
 import { writerProfile } from "../../assets/images";
 import { ReactComponent as Dot } from "../../assets/icons/dot.svg";
 import { CommentWrite } from "../../components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { client } from "../../libs/api";
 
 const ArticleComment = ({ articleData, setIsCommentAdded }) => {
   const { id, commentNumber, comments } = articleData || {};
+  let uniqueId = 0;
+
+  useEffect(() => {
+    uniqueId = uuidv4();
+    console.log(uniqueId);
+  }, []);
 
   const [commentData, setCommentData] = useState({
-    commentId: `${uuidv4()}`,
+    commentId: `${uniqueId}`,
     articleId: id,
     userId: 1,
     content: "",
