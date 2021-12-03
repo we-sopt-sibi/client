@@ -12,7 +12,6 @@ const ArticleComment = ({ articleData, setIsCommentAdded }) => {
 
   useEffect(() => {
     uniqueId = uuidv4();
-    console.log(uniqueId);
   }, []);
 
   const [commentData, setCommentData] = useState({

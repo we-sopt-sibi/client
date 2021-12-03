@@ -11,6 +11,7 @@ const ArticleBodyFooter = ({ articleData }) => {
 
   const [likeCount, setLikeCount] = useState(0);
   const [isLikeClicked, setIsLikeClicked] = useState(0);
+  const [isFirstRender, setIsFirstRender] = useState(true);
 
   useEffect(() => {
     setIsLikeClicked(isLike);
@@ -18,8 +19,14 @@ const ArticleBodyFooter = ({ articleData }) => {
   }, [likeNumber]);
 
   useEffect(() => {
-    if (isLikeClicked) setLikeCount(likeCount + 1);
-    else setLikeCount(likeCount - 1);
+    if (isLikeClicked) {
+      if (isFirstRender) {
+        setLikeCount(likeCount);
+        setIsFirstRender(false);
+      } else {
+        setLikeCount(likeCount + 1);
+      }
+    } else setLikeCount(likeCount - 1);
   }, [isLikeClicked]);
 
   const handleLikeClick = () => {
