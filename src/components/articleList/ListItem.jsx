@@ -42,7 +42,7 @@ const StyledWrapper = styled.div`
   width: 100%;
   height: 17rem;
   margin-bottom: 1.5rem;
-  padding-top: 2.7rem;
+  padding-top: 2.2rem;
   padding-left: 3rem;
   border-bottom: 0.1rem solid ${({ theme }) => theme.colors.gray300};
   @media ${({ theme }) => theme.device.tablet} {
