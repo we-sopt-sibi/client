@@ -21,7 +21,7 @@ const ListHeader = () => {
     "VR",
     "UI",
     "UI",
-    "아이패드",
+    // "아이패드",
   ];
   const [tagData, setTagData] = useState(initData);
   const [added, setAdded] = useState(false);
