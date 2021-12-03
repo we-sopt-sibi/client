@@ -7,9 +7,9 @@ import { ReactComponent as LikeWhiteIcon } from "../../assets/icons/likeWhite.sv
 
 const ArticleBodyFooter = ({ articleData }) => {
   const navigate = useNavigate();
-  const { isLike, likeNumber, commentNumber } = articleData || { isLike: false, likeNumber: 0, commentNumber: 0 };
+  const { isLike, likeNumber, commentNumber } = articleData || {};
 
-  const [likeCount, setLikeCount] = useState(likeNumber);
+  const [likeCount, setLikeCount] = useState(0);
   const [isLikeClicked, setIsLikeClicked] = useState(0);
 
   useEffect(() => {
