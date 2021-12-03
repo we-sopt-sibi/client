@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import ArrowIcon from "../../assets/icons/arrow.svg";
 
 const ListHeader = () => {
-  const [tagData, setTagData] = useState([
+  const initData = [
     "IT",
     "인공지능",
     "스마트폰",
@@ -22,9 +22,36 @@ const ListHeader = () => {
     "UI",
     "UI",
     "아이패드",
-  ]);
+  ];
+  const [tagData, setTagData] = useState(initData);
   const [added, setAdded] = useState(false);
   const [folded, setFolded] = useState("더보기");
+
+  const calculateTagsNumber = () => {
+    console.log(window.innerWidth);
+    if (window.innerWidth <= 360) {
+      setTagData((currentArray) => {
+        const newArray = [...currentArray];
+        newArray.splice(3, 9);
+        return newArray;
+      });
+    } else if (window.innerWidth <= 768) {
+      setTagData((currentArray) => {
+        const newArray = [...currentArray];
+        newArray.splice(9, 20);
+        return newArray;
+      });
+    }
+  };
+
+  useEffect(() => {
+    calculateTagsNumber();
+    window.addEventListener("resize", calculateTagsNumber);
+
+    return () => {
+      window.removeEventListener("resize", calculateTagsNumber);
+    };
+  }, []);
 
   const addTags = () => {
     setTagData((currentArray) => [

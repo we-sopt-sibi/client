@@ -42,7 +42,7 @@ const StyledWrapper = styled.div`
   width: 100%;
   height: 17rem;
   margin-bottom: 1.5rem;
-  padding-top: 2.7rem;
+  padding-top: 2.2rem;
   padding-left: 3rem;
   border-bottom: 0.1rem solid ${({ theme }) => theme.colors.gray300};
   @media ${({ theme }) => theme.device.tablet} {
@@ -51,6 +51,10 @@ const StyledWrapper = styled.div`
 
   @media ${({ theme }) => theme.device.mobile} {
     width: 32rem;
+    padding-top: 0.4rem;
+    padding-left: 1.2rem;
+    margin-left: 2rem;
+    height: 9.6rem;
   }
   & > div:hover {
     cursor: pointer;
@@ -72,6 +76,10 @@ const StyledWrapper = styled.div`
       padding-right: 0.9rem;
       margin-left: 1.9rem;
       padding-bottom: 2.2rem;
+    }
+
+    @media ${({ theme }) => theme.device.mobile} {
+      padding-bottom: 1.3rem;
     }
   }
 
@@ -97,6 +105,7 @@ const Title = styled.div`
   }
   @media ${({ theme }) => theme.device.mobile} {
     font-size: 1.4rem;
+    margin-bottom: 0.4rem;
   }
   margin-bottom: 0.5rem;
   line-height: 1.8;
@@ -110,7 +119,13 @@ const SubTitle = styled.div`
   }
   @media ${({ theme }) => theme.device.mobile} {
     font-size: 1rem;
+    margin-bottom: 0.7rem;
   }
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   line-height: 1.8;
   margin-bottom: 1.7rem;
   letter-spacing: -0.04em;
@@ -127,7 +142,7 @@ const Caption = styled.div`
       font-size: 1rem;
     }
     @media ${({ theme }) => theme.device.mobile} {
-      font-size: 0.1rem;
+      font-size: 1rem;
     }
   }
 
@@ -135,7 +150,7 @@ const Caption = styled.div`
     margin-left: 0.9rem;
     margin-right: 0.6rem;
     @media ${({ theme }) => theme.device.mobile} {
-      margin: 0;
+      margin: 0 0.3rem;
     }
   }
 `;
