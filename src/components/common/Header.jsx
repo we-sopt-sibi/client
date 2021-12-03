@@ -32,6 +32,7 @@ const StyledWrapper = styled.header`
   align-items: center;
   justify-content: space-between;
   padding: 1.9rem 2rem;
+  padding-right: 0;
   z-index: 99;
 
   & > span {
