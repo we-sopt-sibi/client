@@ -86,6 +86,12 @@ const StyledBodyFooterWrapper = styled.footer`
     width: calc(100% - 3.4rem);
   }
 
+  @media only screen and (max-width: 490px) {
+    width: calc(100% - 2.5rem);
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   @media ${({ theme }) => theme.device.mobile} {
     width: calc(100% - 2rem);
     flex-direction: column;
@@ -111,6 +117,17 @@ const StyledTags = styled.ul`
 
   & > li + li {
     margin-left: 0.8rem;
+  }
+
+  @media only screen and (max-width: 490px) {
+    margin-bottom: 2.4rem;
+
+    & > li {
+      padding: 0.8rem 1rem;
+      & > button {
+        font-size: ${({ theme }) => theme.fontSizes.caption};
+      }
+    }
   }
 
   @media ${({ theme }) => theme.device.mobile} {
@@ -180,6 +197,13 @@ const StyledButtons = styled.div`
 
   & > button + button {
     margin-left: 0.8rem;
+  }
+
+  @media only screen and (max-width: 490px) {
+    & > button {
+      font-size: ${({ theme }) => theme.fontSizes.paragraph1};
+      padding: 0.75rem 1.9rem;
+    }
   }
 
   @media ${({ theme }) => theme.device.mobile} {
